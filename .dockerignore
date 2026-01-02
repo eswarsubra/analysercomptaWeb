@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv
+venv
+ENV
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Logs (will be mounted as volume)
+*.log
+logs/
+
+# Development
+*.md
+.env
+.env.*
+
+# Docker
+Dockerfile
+docker-compose.yml
+deploy.ps1

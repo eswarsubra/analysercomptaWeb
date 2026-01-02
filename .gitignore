@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# application specific ignores
+CLAUDE.md
+*.json
+.toml
+.lock
+*.yaml
+*.yml
+chrome_profile/
+*.ps1
+Dockerfile
+docker-compose.yml
+.env

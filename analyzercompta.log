@@ -1,0 +1,22 @@
+2026-01-07 18:41:40 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-07 18:41:49 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-07 18:53:50 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-07 18:53:51 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-07 19:15:56 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-07 19:15:57 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-07 19:25:19 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-07 19:25:20 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-07 19:27:57 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-01-07 19:33:44 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-07 19:33:45 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-08 00:16:13 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-08 00:16:43 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-08 00:18:22 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-08 00:18:34 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090

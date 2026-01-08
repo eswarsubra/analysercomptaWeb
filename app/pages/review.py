@@ -1,7 +1,7 @@
 from nicegui import ui
 from app.components.layout import layout
 from app.services import NewProductsService, SupplierService, ProductService
-from app.models.supplier_newproducts import NEWPRODUCT_STATUS_CHOICES
+from app.models import NEWPRODUCT_STATUS_CHOICES
 from app.logging_config import get_logger
 
 logger = get_logger(__name__)
@@ -146,6 +146,7 @@ def review_page():
             'idFacture': source_row.get('idFacture'),
             'idsupplier': source_row.get('idsupplier'),
             'supplier_name': source_row.get('supplier_name', 'Unknown'),
+            'facture_filename': source_row.get('facture_filename', ''),
             '_duplicated': True,
             '_is_new': True,  # Flag to identify unsaved rows
         }
@@ -417,6 +418,7 @@ def review_page():
             {'name': 'misc', 'label': 'Misc', 'field': 'misc', 'align': 'left'},
             {'name': 'Status', 'label': 'Status', 'field': 'Status', 'align': 'center'},
             {'name': 'idFacture', 'label': 'Facture', 'field': 'idFacture', 'align': 'center'},
+            {'name': 'facture_filename', 'label': 'Filename', 'field': 'facture_filename', 'align': 'left'},
             {'name': 'actions', 'label': 'Actions', 'field': 'actions', 'align': 'center'},
         ]
 
@@ -458,6 +460,16 @@ def review_page():
                    @click.stop="$parent.$emit('goto-facture', props.row.idFacture)">
                     #{{ props.row.idFacture }}
                 </a>
+                <span v-else class="text-grey-5">-</span>
+            </q-td>
+        ''')
+
+        # Facture filename - read-only but copyable
+        table_ref['table'].add_slot('body-cell-facture_filename', '''
+            <q-td :props="props" style="user-select: text; cursor: text;">
+                <span v-if="props.row.facture_filename" class="text-grey-8">
+                    {{ props.row.facture_filename }}
+                </span>
                 <span v-else class="text-grey-5">-</span>
             </q-td>
         ''')

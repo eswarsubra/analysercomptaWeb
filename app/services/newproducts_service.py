@@ -2,11 +2,14 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func, text
 from typing import Optional
 from app.database import get_db, get_session
-from app.models.supplier_newproducts import SupplierNewProducts, NEWPRODUCT_STATUS_CHOICES
-from app.models.supplier_product import SupplierProduct
-from app.models.supplier_factitem import SupplierFactItem
-from app.models.supplier_facture import SupplierFacture
-from app.models.supplier import Supplier
+from app.models import (
+    Supplier,
+    SupplierProduct,
+    SupplierFacture,
+    SupplierFactItem,
+    SupplierNewProducts,
+    NEWPRODUCT_STATUS_CHOICES,
+)
 from app.logging_config import get_logger
 
 logger = get_logger(__name__)
@@ -44,11 +47,23 @@ class NewProductsService:
                 ).all()
                 suppliers = {str(s.idsupplier): s.name for s in supplier_records}
 
-            # Build result with supplier_name included
+            # Build facture filename lookup dict
+            facture_ids = set(r.idFacture for r in results if r.idFacture)
+            facture_filenames = {}
+            if facture_ids:
+                facture_ids_int = [int(f) for f in facture_ids if f and str(f).isdigit()]
+                if facture_ids_int:
+                    facture_records = db.query(SupplierFacture).filter(
+                        SupplierFacture.idFacture.in_(facture_ids_int)
+                    ).all()
+                    facture_filenames = {str(f.idFacture): f.filename for f in facture_records}
+
+            # Build result with supplier_name and facture_filename included
             products = []
             for row in results:
                 product_dict = row.to_dict()
                 product_dict['supplier_name'] = suppliers.get(row.idsupplier, 'Unknown')
+                product_dict['facture_filename'] = facture_filenames.get(row.idFacture, '')
                 products.append(product_dict)
             return products
 
@@ -181,11 +196,15 @@ class NewProductsService:
 
     @staticmethod
     def get_facture_ids() -> list[str]:
-        """Get all unique facture IDs."""
+        """Get distinct facture IDs from staging table (excluding CLOSED/OBSOLETE).
+
+        Only returns factures that have non-closed/obsolete records in the staging table.
+        """
         with get_db() as db:
             factures = db.query(SupplierNewProducts.idFacture).distinct().filter(
-                SupplierNewProducts.idFacture.isnot(None)
-            ).all()
+                SupplierNewProducts.idFacture.isnot(None),
+                SupplierNewProducts.Status.notin_(['CLOSED', 'OBSOLETE'])
+            ).order_by(SupplierNewProducts.idFacture.desc()).all()
             return [f[0] for f in factures if f[0]]
 
     @staticmethod

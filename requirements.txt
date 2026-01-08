@@ -2,3 +2,6 @@ nicegui>=3.4.0
 sqlalchemy>=2.0.0
 pymysql>=1.1.0
 pyyaml>=6.0.0
+python-dateutil>=2.8.0
+# Local package - install with: pip install -e ../AnalyserComptaCore
+analysercomptacore

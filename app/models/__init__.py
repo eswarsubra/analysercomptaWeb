@@ -1,13 +1,20 @@
-from app.models.supplier import Supplier
-from app.models.supplier_product import SupplierProduct
-from app.models.supplier_facture import SupplierFacture
-from app.models.supplier_factitem import SupplierFactItem
-from app.models.supplier_newproducts import SupplierNewProducts
+# Re-export models from AnalyserComptaCore
+from analysercomptacore.models.suppliers import (
+    Supplier,
+    SupplierProduct,
+    SupplierFacture,
+    SupplierFactItem,
+    SupplierNewProducts,
+    NEWPRODUCT_STATUS_CHOICES,
+)
+from analysercomptacore.models.banking import BankInstruction
 
 __all__ = [
     'Supplier',
     'SupplierProduct',
     'SupplierFacture',
     'SupplierFactItem',
-    'SupplierNewProducts'
+    'SupplierNewProducts',
+    'NEWPRODUCT_STATUS_CHOICES',
+    'BankInstruction',
 ]

@@ -1,8 +1,7 @@
 from sqlalchemy.orm import Session, joinedload
 from typing import Optional
 from app.database import get_db
-from app.models.supplier_product import SupplierProduct
-from app.models.supplier import Supplier
+from app.models import Supplier, SupplierProduct
 
 
 class ProductService:

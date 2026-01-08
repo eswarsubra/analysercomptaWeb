@@ -17,7 +17,8 @@ from app.pages import (
     suppliers_page,
     products_page,
     factures_page,
-    review_page
+    review_page,
+    transactions_page
 )
 
 # Configure app

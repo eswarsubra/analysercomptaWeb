@@ -3,9 +3,7 @@ from sqlalchemy import func
 from typing import Optional
 from datetime import datetime
 from app.database import get_db
-from app.models.supplier_facture import SupplierFacture
-from app.models.supplier_factitem import SupplierFactItem
-from app.models.supplier import Supplier
+from app.models import Supplier, SupplierFacture, SupplierFactItem
 
 
 class FactureService:

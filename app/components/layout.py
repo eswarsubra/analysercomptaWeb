@@ -12,12 +12,24 @@ def header():
 
         # Navigation items
         with ui.row().classes('items-center gap-1'):
+            # Dashboard - direct link
             _nav_item('Dashboard', 'dashboard', '/')
-            _nav_item('Suppliers', 'business', '/suppliers')
-            _nav_item('Products', 'inventory', '/products')
-            _nav_item('Factures', 'receipt_long', '/factures')
-            ui.separator().props('vertical').classes('mx-2 bg-white/30')
-            _nav_item('Review Pending', 'rate_review', '/review', highlight=True)
+
+            # Supplier dropdown menu
+            _nav_dropdown('Supplier', 'business', [
+                ('Suppliers', 'store', '/suppliers'),
+                ('Products', 'inventory', '/products'),
+                ('Factures', 'receipt_long', '/factures'),
+                ('Review Pending', 'rate_review', '/review'),
+            ])
+
+            # Transactions dropdown menu
+            _nav_dropdown('Transactions', 'account_balance', [
+                ('View Transactions', 'list_alt', '/transactions'),
+            ])
+
+            # Sales dropdown menu (placeholder for future)
+            _nav_dropdown('Sales', 'point_of_sale', [])
 
         # Theme toggle
         with ui.row().classes('items-center'):
@@ -37,6 +49,26 @@ def _nav_item(label: str, icon: str, path: str, highlight: bool = False):
         icon=icon,
         on_click=lambda: ui.navigate.to(path)
     ).props(props).classes(classes)
+
+
+def _nav_dropdown(label: str, icon: str, items: list[tuple[str, str, str]]):
+    """Create a dropdown navigation menu.
+
+    Args:
+        label: Menu button label
+        icon: Menu button icon
+        items: List of tuples (label, icon, path) for menu items
+    """
+    with ui.button(label, icon=icon).props('flat dense').classes('text-white'):
+        with ui.menu().classes('bg-white dark:bg-gray-800'):
+            if items:
+                for item_label, item_icon, item_path in items:
+                    ui.menu_item(
+                        item_label,
+                        on_click=lambda p=item_path: ui.navigate.to(p)
+                    ).props(f'icon="{item_icon}"').classes('text-gray-800 dark:text-gray-200')
+            else:
+                ui.menu_item('Coming soon...').props('disable').classes('text-gray-400')
 
 
 def layout(title: str = ''):

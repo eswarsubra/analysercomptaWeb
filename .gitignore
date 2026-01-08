@@ -18,6 +18,9 @@ CLAUDE.md
 *.yml
 chrome_profile/
 *.ps1
+*.bat
 Dockerfile
 docker-compose.yml
 .env
+.docker-build/
+nul

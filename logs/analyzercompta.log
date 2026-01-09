@@ -26,3 +26,34 @@
 2026-01-05 17:16:04 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
 2026-01-05 17:19:06 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
 2026-01-05 17:19:07 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-08 18:40:03 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-01-08 18:40:05 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-08 18:54:06 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-01-08 18:54:09 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-08 19:03:35 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-01-08 19:03:38 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-08 19:19:29 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-01-08 19:19:34 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-08 19:24:52 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-01-08 19:24:55 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-08 19:31:39 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-01-08 19:31:42 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-09 18:09:03 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-01-09 18:09:06 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-09 18:09:38 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-01-09 18:09:38 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-01-09 18:10:07 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-01-09 18:10:07 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-01-09 18:10:20 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-01-09 18:10:20 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-01-09 18:10:25 - nicegui - WARNING - http://localhost:8099/.well-known/appspecific/com.chrome.devtools.json not found
+2026-01-09 18:11:10 - nicegui - WARNING - http://localhost:8099/.well-known/appspecific/com.chrome.devtools.json not found
+2026-01-09 18:12:01 - nicegui - WARNING - http://localhost:8099/.well-known/appspecific/com.chrome.devtools.json not found
+2026-01-09 18:13:47 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-01-09 18:13:47 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [Errno 111] Connection refused"))
+2026-01-09 18:21:50 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-01-09 18:21:54 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-09 18:22:07 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 18:22:07 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:22:07 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-01-09 18:22:07 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7

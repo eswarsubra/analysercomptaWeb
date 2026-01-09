@@ -1,13 +1,13 @@
-from datetime import datetime, date
+from datetime import date
 from dateutil.relativedelta import relativedelta
 from typing import Optional
-from sqlalchemy import func
+
+from analysercomptacore.services import BankService as CoreBankService
 from app.database import get_db
-from app.models import BankInstruction
 
 
 class BankInstructionService:
-    """Service for BankInstruction operations - read-only transaction viewing."""
+    """Service for BankInstruction operations - wraps Core's BankService."""
 
     @staticmethod
     def get_default_date_range() -> tuple[date, date]:
@@ -40,53 +40,32 @@ class BankInstructionService:
         Returns:
             List of transaction dictionaries
         """
+        # Convert date objects to strings for Core
+        date_from_str = date_from.strftime('%Y-%m-%d') if date_from else None
+        date_to_str = date_to.strftime('%Y-%m-%d') if date_to else None
+
         with get_db() as db:
-            query = db.query(BankInstruction)
-
-            # Date range filter
-            if date_from:
-                query = query.filter(BankInstruction.Date_de_comptabilisation >= date_from)
-            if date_to:
-                # Include the entire end date
-                query = query.filter(BankInstruction.Date_de_comptabilisation <= date_to)
-
-            # Libelle text search
-            if libelle:
-                query = query.filter(BankInstruction.Libelle.ilike(f'%{libelle}%'))
-
-            # Montant filter
-            if montant is not None:
-                query = query.filter(BankInstruction.Montant == montant)
-
-            # Filename filter
-            if filename:
-                query = query.filter(BankInstruction.filename.ilike(f'%{filename}%'))
-
-            # Order by date descending and limit
-            results = query.order_by(
-                BankInstruction.Date_de_comptabilisation.desc(),
-                BankInstruction.TransactionID.desc()
-            ).limit(limit).all()
-
-            return [row.to_dict() for row in results]
+            return CoreBankService.get_transactions_by_date_range(
+                db,
+                date_from=date_from_str,
+                date_to=date_to_str,
+                libelle_filter=libelle,
+                montant_filter=montant,
+                filename_filter=filename,
+                limit=limit
+            )
 
     @staticmethod
     def get_by_id(transaction_id: int) -> Optional[dict]:
         """Get a transaction by ID."""
         with get_db() as db:
-            transaction = db.query(BankInstruction).filter(
-                BankInstruction.TransactionID == transaction_id
-            ).first()
-            return transaction.to_dict() if transaction else None
+            return CoreBankService.get_transaction_by_id(db, transaction_id)
 
     @staticmethod
     def get_distinct_filenames() -> list[str]:
         """Get all distinct filenames for filter dropdown."""
         with get_db() as db:
-            filenames = db.query(BankInstruction.filename).distinct().filter(
-                BankInstruction.filename.isnot(None)
-            ).order_by(BankInstruction.filename).all()
-            return [f[0] for f in filenames if f[0]]
+            return CoreBankService.get_distinct_filenames(db)
 
     @staticmethod
     def get_count(
@@ -97,18 +76,56 @@ class BankInstructionService:
         filename: Optional[str] = None
     ) -> int:
         """Get count of transactions matching filters."""
+        # Convert date objects to strings for Core
+        date_from_str = date_from.strftime('%Y-%m-%d') if date_from else None
+        date_to_str = date_to.strftime('%Y-%m-%d') if date_to else None
+
         with get_db() as db:
-            query = db.query(func.count(BankInstruction.TransactionID))
+            return CoreBankService.get_transaction_count(
+                db,
+                date_from=date_from_str,
+                date_to=date_to_str,
+                libelle_filter=libelle,
+                montant_filter=montant,
+                filename_filter=filename
+            )
 
-            if date_from:
-                query = query.filter(BankInstruction.Date_de_comptabilisation >= date_from)
-            if date_to:
-                query = query.filter(BankInstruction.Date_de_comptabilisation <= date_to)
-            if libelle:
-                query = query.filter(BankInstruction.Libelle.ilike(f'%{libelle}%'))
-            if montant is not None:
-                query = query.filter(BankInstruction.Montant == montant)
-            if filename:
-                query = query.filter(BankInstruction.filename.ilike(f'%{filename}%'))
+    @staticmethod
+    def get_distinct_months_years() -> dict:
+        """Get distinct months and years from transactions.
 
-            return query.scalar()
+        Returns:
+            Dict with 'months' (list of ints 1-12) and 'years' (list of ints)
+        """
+        with get_db() as db:
+            return CoreBankService.get_distinct_months_years(db)
+
+    @staticmethod
+    def get_classified_transactions(month: int, year: int) -> list[dict]:
+        """Get transactions with Type and Qualifier classification.
+
+        Args:
+            month: Month number (1-12)
+            year: Year (e.g., 2025)
+
+        Returns:
+            List of dicts with columns:
+            Type, Qualifier, Libelle, Montant, Date_comptabilisation,
+            Date_operation, Date_valeur, TransactionID, Reference
+        """
+        with get_db() as db:
+            return CoreBankService.get_classified_transactions_for_month_year(db, month, year)
+
+    @staticmethod
+    def get_monthly_summary(month: int, year: int) -> list[dict]:
+        """Get monthly summary of transactions by category.
+
+        Args:
+            month: Month number (1-12)
+            year: Year (e.g., 2025)
+
+        Returns:
+            List of dicts with Type, Name, Montant
+        """
+        with get_db() as db:
+            return CoreBankService.build_monthly_summary(db, month, year)

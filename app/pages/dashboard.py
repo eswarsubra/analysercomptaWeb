@@ -1,96 +1,112 @@
 from nicegui import ui
 from app.components.layout import layout
-from app.services import SupplierService, ProductService, FactureService, NewProductsService
+from app.services import SupersetService
+from app.logging_config import get_logger
+
+logger = get_logger(__name__)
+
+# Superset configuration
+SUPERSET_URL = 'http://localhost:8088'
+SUPERSET_DASHBOARD_SLUG = 'monthlydash'
 
 
 @ui.page('/')
 def dashboard_page():
-    """Dashboard page with summary statistics."""
+    """Dashboard page with embedded Superset dashboard."""
 
-    def load_data():
-        suppliers = SupplierService.get_all()
-        products = ProductService.get_all()
-        facture_summary = FactureService.get_summary()
-        recent_factures = FactureService.get_recent(5)
-        pending_count = NewProductsService.get_pending_count()
-        status_counts = NewProductsService.get_status_counts()
-        return suppliers, products, facture_summary, recent_factures, pending_count, status_counts
+    def get_superset_embed_config() -> dict | None:
+        """Get Superset embedding configuration with guest token."""
+        try:
+            # Get dashboard UUID from slug
+            dashboard_uuid = SupersetService.get_dashboard_uuid(SUPERSET_DASHBOARD_SLUG)
+            if not dashboard_uuid:
+                logger.error(f'Dashboard not found: {SUPERSET_DASHBOARD_SLUG}')
+                return None
+
+            # Get guest token
+            guest_token = SupersetService.get_guest_token(dashboard_uuid)
+            return {
+                'uuid': dashboard_uuid,
+                'token': guest_token,
+            }
+        except Exception as e:
+            logger.error(f'Failed to get Superset embed config: {e}')
+            return None
 
     with layout('Dashboard'):
-        suppliers, products, facture_summary, recent_factures, pending_count, status_counts = load_data()
+        # Embedded Superset Dashboard
+        with ui.card().classes('w-full h-full').style('min-height: calc(100vh - 180px)'):
+            with ui.row().classes('w-full items-center justify-between mb-2'):
+                ui.label('Monthly Dashboard').classes('text-lg font-semibold')
+                ui.link(
+                    'Open in Superset',
+                    f'{SUPERSET_URL}/superset/dashboard/{SUPERSET_DASHBOARD_SLUG}/',
+                    new_tab=True
+                ).classes('text-sm text-blue-600')
 
-        # Summary cards row
-        with ui.row().classes('w-full gap-4 flex-wrap'):
-            _stat_card('Suppliers', len(suppliers), 'business', 'blue', '/suppliers')
-            _stat_card('Products', len(products), 'inventory', 'green', '/products')
-            _stat_card('Factures', facture_summary['count'], 'receipt_long', 'purple', '/factures')
-            _stat_card('Pending Review', pending_count, 'rate_review', 'amber', '/review')
+            # Container for embedded dashboard - fills remaining space
+            embed_container = ui.element('div').props('id="superset-embed-container"').classes(
+                'w-full rounded-lg bg-gray-100'
+            ).style('height: calc(100vh - 230px); min-height: 400px')
 
-        ui.separator().classes('my-6')
+            # Get embed config
+            embed_config = get_superset_embed_config()
 
-        # Two column layout
-        with ui.row().classes('w-full gap-6'):
-            # Recent factures
-            with ui.card().classes('flex-1'):
-                ui.label('Recent Factures').classes('text-lg font-semibold mb-4')
-                if recent_factures:
-                    columns = [
-                        {'name': 'factNum', 'label': 'Number', 'field': 'factNum', 'align': 'left'},
-                        {'name': 'supplier_name', 'label': 'Supplier', 'field': 'supplier_name', 'align': 'left'},
-                        {'name': 'factDate', 'label': 'Date', 'field': 'factDate', 'align': 'left'},
-                        {'name': 'factmontantttc', 'label': 'TTC', 'field': 'factmontantttc', 'align': 'right'},
-                    ]
-                    ui.table(columns=columns, rows=recent_factures).classes('w-full')
-                else:
-                    ui.label('No factures found').classes('text-gray-500')
+            if embed_config:
+                # Load Superset Embedded SDK from jsdelivr
+                ui.add_head_html('''
+                    <script src="https://cdn.jsdelivr.net/npm/@superset-ui/embedded-sdk@0.1.0-alpha.10/bundle/index.min.js"></script>
+                ''')
 
-            # Status breakdown
-            with ui.card().classes('w-80'):
-                ui.label('Review Status Breakdown').classes('text-lg font-semibold mb-4')
-                if status_counts:
-                    for status, count in status_counts.items():
-                        with ui.row().classes('w-full justify-between items-center py-1'):
-                            _status_label(status)
-                            ui.badge(str(count)).props('color=grey')
-                else:
-                    ui.label('No pending items').classes('text-gray-500')
+                # Container for the embedded dashboard
+                with embed_container:
+                    pass  # SDK will mount here
 
-        ui.separator().classes('my-6')
+                ui.run_javascript(f'''
+                    (async function() {{
+                        // Wait for SDK and container
+                        await new Promise(r => setTimeout(r, 500));
 
-        # Totals summary
-        with ui.card().classes('w-full'):
-            ui.label('Factures Summary').classes('text-lg font-semibold mb-4')
-            with ui.row().classes('gap-8'):
-                with ui.column():
-                    ui.label('Total HT').classes('text-sm text-gray-500')
-                    ui.label(f"{facture_summary['total_ht']:,.2f} EUR").classes('text-xl font-bold text-blue-600')
-                with ui.column():
-                    ui.label('Total TVA').classes('text-sm text-gray-500')
-                    ui.label(f"{facture_summary['total_tva']:,.2f} EUR").classes('text-xl font-bold text-amber-600')
-                with ui.column():
-                    ui.label('Total TTC').classes('text-sm text-gray-500')
-                    ui.label(f"{facture_summary['total_ttc']:,.2f} EUR").classes('text-xl font-bold text-green-600')
+                        const container = document.getElementById('superset-embed-container');
+                        console.log('Container found:', !!container);
+                        console.log('SDK loaded:', !!window.supersetEmbeddedSdk);
 
+                        if (!container || !window.supersetEmbeddedSdk) {{
+                            console.error('Missing container or SDK');
+                            container.innerHTML = '<p style="color:red;padding:20px;">Failed to load Superset SDK</p>';
+                            return;
+                        }}
 
-def _stat_card(title: str, value: int, icon: str, color: str, link: str):
-    """Create a statistics card."""
-    with ui.card().classes(f'cursor-pointer hover:shadow-lg transition-shadow').on('click', lambda: ui.navigate.to(link)):
-        with ui.row().classes('items-center gap-4 p-2'):
-            ui.icon(icon, size='lg').classes(f'text-{color}-500')
-            with ui.column().classes('gap-0'):
-                ui.label(str(value)).classes('text-2xl font-bold')
-                ui.label(title).classes('text-sm text-gray-500')
+                        try {{
+                            await window.supersetEmbeddedSdk.embedDashboard({{
+                                id: "{embed_config['uuid']}",
+                                supersetDomain: "{SUPERSET_URL}",
+                                mountPoint: container,
+                                fetchGuestToken: () => "{embed_config['token']}",
+                                dashboardUiConfig: {{
+                                    hideTitle: true,
+                                    hideChartControls: false,
+                                    hideTab: true,
+                                    filters: {{ visible: true, expanded: false }}
+                                }},
+                            }});
+                            console.log('Dashboard embedded successfully');
 
-
-def _status_label(status: str):
-    """Create a status label with color."""
-    colors = {
-        'CLOSED': 'green',
-        'CREATE PRODUCT': 'blue',
-        'IGNORE PRODUCT': 'amber',
-        'FULL IGNORE': 'red',
-        'OBSOLETE': 'gray',
-        'INCOMPLETE': 'pink'
-    }
-    color = colors.get(status, 'gray')
-    ui.label(status).classes(f'text-{color}-600 text-sm')
+                            // Style the iframe to fill container
+                            const iframe = container.querySelector('iframe');
+                            if (iframe) {{
+                                iframe.style.width = '100%';
+                                iframe.style.height = '100%';
+                                iframe.style.border = 'none';
+                            }}
+                        }} catch (err) {{
+                            console.error('Embed error:', err);
+                            container.innerHTML = '<p style="color:red;padding:20px;">Error: ' + err.message + '</p>';
+                        }}
+                    }})();
+                ''')
+            else:
+                with embed_container:
+                    ui.label('Failed to load dashboard. Check Superset connection.').classes(
+                        'text-red-500 p-4'
+                    )

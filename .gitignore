@@ -8,6 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+.lock
 
 # application specific ignores
 CLAUDE.md
@@ -24,3 +25,4 @@ docker-compose.yml
 .env
 .docker-build/
 nul
+.log

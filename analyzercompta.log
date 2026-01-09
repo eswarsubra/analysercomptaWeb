@@ -20,3 +20,1400 @@ ConnectionResetError: [WinError 10054] Une connexion existante a dû être ferm�
 2026-01-08 00:16:43 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
 2026-01-08 00:18:22 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
 2026-01-08 00:18:34 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-08 19:37:06 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-08 19:37:28 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 12:17:29 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 12:17:31 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:02:22 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:02:33 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:02:57 - nicegui - ERROR - app.storage.user needs a storage_secret passed in ui.run()
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 108, in load_data
+    cached = get_cached_data(month, year)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 69, in get_cached_data
+    return app.storage.user.get(cache_key)
+           ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 112, in user
+    raise RuntimeError('app.storage.user needs a storage_secret passed in ui.run()')
+RuntimeError: app.storage.user needs a storage_secret passed in ui.run()
+2026-01-09 14:03:10 - nicegui - ERROR - app.storage.user needs a storage_secret passed in ui.run()
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 108, in load_data
+    cached = get_cached_data(month, year)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 69, in get_cached_data
+    return app.storage.user.get(cache_key)
+           ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 112, in user
+    raise RuntimeError('app.storage.user needs a storage_secret passed in ui.run()')
+RuntimeError: app.storage.user needs a storage_secret passed in ui.run()
+2026-01-09 14:03:19 - nicegui - ERROR - app.storage.user needs a storage_secret passed in ui.run()
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 108, in load_data
+    cached = get_cached_data(month, year)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 69, in get_cached_data
+    return app.storage.user.get(cache_key)
+           ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 112, in user
+    raise RuntimeError('app.storage.user needs a storage_secret passed in ui.run()')
+RuntimeError: app.storage.user needs a storage_secret passed in ui.run()
+2026-01-09 14:05:57 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:06:00 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:06:24 - nicegui - ERROR - app.storage.user needs a storage_secret passed in ui.run()
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 108, in load_data
+    cached = get_cached_data(month, year)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 69, in get_cached_data
+    return app.storage.user.get(cache_key)
+           ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 112, in user
+    raise RuntimeError('app.storage.user needs a storage_secret passed in ui.run()')
+RuntimeError: app.storage.user needs a storage_secret passed in ui.run()
+2026-01-09 14:06:25 - nicegui - ERROR - app.storage.user needs a storage_secret passed in ui.run()
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 108, in load_data
+    cached = get_cached_data(month, year)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 69, in get_cached_data
+    return app.storage.user.get(cache_key)
+           ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 112, in user
+    raise RuntimeError('app.storage.user needs a storage_secret passed in ui.run()')
+RuntimeError: app.storage.user needs a storage_secret passed in ui.run()
+2026-01-09 14:06:25 - nicegui - ERROR - app.storage.user needs a storage_secret passed in ui.run()
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 108, in load_data
+    cached = get_cached_data(month, year)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 69, in get_cached_data
+    return app.storage.user.get(cache_key)
+           ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 112, in user
+    raise RuntimeError('app.storage.user needs a storage_secret passed in ui.run()')
+RuntimeError: app.storage.user needs a storage_secret passed in ui.run()
+2026-01-09 14:06:29 - nicegui - ERROR - app.storage.user needs a storage_secret passed in ui.run()
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 81, in clear_cache
+    keys_to_remove = [k for k in app.storage.user.keys() if k.startswith(CACHE_KEY)]
+                                 ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 112, in user
+    raise RuntimeError('app.storage.user needs a storage_secret passed in ui.run()')
+RuntimeError: app.storage.user needs a storage_secret passed in ui.run()
+2026-01-09 14:06:30 - nicegui - ERROR - app.storage.user needs a storage_secret passed in ui.run()
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 108, in load_data
+    cached = get_cached_data(month, year)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 69, in get_cached_data
+    return app.storage.user.get(cache_key)
+           ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 112, in user
+    raise RuntimeError('app.storage.user needs a storage_secret passed in ui.run()')
+RuntimeError: app.storage.user needs a storage_secret passed in ui.run()
+2026-01-09 14:14:21 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:14:25 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:15:34 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:15:38 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:17:12 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:17:16 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:18:33 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:18:36 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:18:46 - nicegui - ERROR - Type is not JSON serializable: Timestamp
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 59, in _orjson_converter
+    raise TypeError(f'Object of type {obj.__class__.__name__} is not JSON serializable')
+TypeError: Object of type Timestamp is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 118, in loop
+    await coro
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 131, in _emit
+    await core.sio.emit(message_type, data, room=client_id)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_server.py", line 179, in emit
+    await self.manager.emit(event, data, namespace, room=room,
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_manager.py", line 40, in emit
+    encoded_packet = pkt.encode()
+                     ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\packet.py", line 64, in encode
+    encoded_packet += self.json.dumps(data, separators=(',', ':'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 40, in dumps
+    return orjson.dumps(obj, option=opts, default=_orjson_converter).decode('utf-8')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Type is not JSON serializable: Timestamp
+2026-01-09 14:18:47 - nicegui - ERROR - Type is not JSON serializable: Timestamp
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 59, in _orjson_converter
+    raise TypeError(f'Object of type {obj.__class__.__name__} is not JSON serializable')
+TypeError: Object of type Timestamp is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 118, in loop
+    await coro
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 131, in _emit
+    await core.sio.emit(message_type, data, room=client_id)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_server.py", line 179, in emit
+    await self.manager.emit(event, data, namespace, room=room,
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_manager.py", line 40, in emit
+    encoded_packet = pkt.encode()
+                     ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\packet.py", line 64, in encode
+    encoded_packet += self.json.dumps(data, separators=(',', ':'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 40, in dumps
+    return orjson.dumps(obj, option=opts, default=_orjson_converter).decode('utf-8')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Type is not JSON serializable: Timestamp
+2026-01-09 14:18:48 - nicegui - ERROR - Type is not JSON serializable: Timestamp
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 59, in _orjson_converter
+    raise TypeError(f'Object of type {obj.__class__.__name__} is not JSON serializable')
+TypeError: Object of type Timestamp is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 118, in loop
+    await coro
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 131, in _emit
+    await core.sio.emit(message_type, data, room=client_id)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_server.py", line 179, in emit
+    await self.manager.emit(event, data, namespace, room=room,
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_manager.py", line 40, in emit
+    encoded_packet = pkt.encode()
+                     ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\packet.py", line 64, in encode
+    encoded_packet += self.json.dumps(data, separators=(',', ':'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 40, in dumps
+    return orjson.dumps(obj, option=opts, default=_orjson_converter).decode('utf-8')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Type is not JSON serializable: Timestamp
+2026-01-09 14:18:48 - nicegui - ERROR - Type is not JSON serializable: Timestamp
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 59, in _orjson_converter
+    raise TypeError(f'Object of type {obj.__class__.__name__} is not JSON serializable')
+TypeError: Object of type Timestamp is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 118, in loop
+    await coro
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 131, in _emit
+    await core.sio.emit(message_type, data, room=client_id)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_server.py", line 179, in emit
+    await self.manager.emit(event, data, namespace, room=room,
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_manager.py", line 40, in emit
+    encoded_packet = pkt.encode()
+                     ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\packet.py", line 64, in encode
+    encoded_packet += self.json.dumps(data, separators=(',', ':'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 40, in dumps
+    return orjson.dumps(obj, option=opts, default=_orjson_converter).decode('utf-8')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Type is not JSON serializable: Timestamp
+2026-01-09 14:30:18 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:30:23 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:31:39 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:31:42 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:38:45 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:38:49 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:45:49 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:45:52 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 14:54:59 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-01-09 14:56:05 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 14:56:07 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 15:02:31 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 15:02:33 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 17:04:53 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 17:05:04 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 17:05:08 - nicegui - ERROR - Date.__init__() got an unexpected keyword argument 'label'
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    |     return create_500_error_page(e, request)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    |     raise e
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    |     result = func(*dec_args, **dec_kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 126, in explore_sales_page
+    |     ui.date(
+    | TypeError: Date.__init__() got an unexpected keyword argument 'label'
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    return create_500_error_page(e, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    raise e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    result = func(*dec_args, **dec_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 126, in explore_sales_page
+    ui.date(
+TypeError: Date.__init__() got an unexpected keyword argument 'label'
+2026-01-09 17:06:24 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 17:06:27 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 17:06:32 - nicegui - ERROR - Date.__init__() got an unexpected keyword argument 'label'
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    |     return create_500_error_page(e, request)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    |     raise e
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    |     result = func(*dec_args, **dec_kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 126, in explore_sales_page
+    |     ui.date(
+    | TypeError: Date.__init__() got an unexpected keyword argument 'label'
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    return create_500_error_page(e, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    raise e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    result = func(*dec_args, **dec_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 126, in explore_sales_page
+    ui.date(
+TypeError: Date.__init__() got an unexpected keyword argument 'label'
+2026-01-09 17:08:08 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 17:08:10 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 17:40:59 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 17:41:02 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 17:41:03 - nicegui - ERROR - Html.__init__() missing 1 required keyword-only argument: 'sanitize'
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    |     return create_500_error_page(e, request)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    |     raise e
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    |     result = func(*dec_args, **dec_kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\dashboard.py", line 42, in dashboard_page
+    |     ui.html(f'''
+    | TypeError: Html.__init__() missing 1 required keyword-only argument: 'sanitize'
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    return create_500_error_page(e, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    raise e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    result = func(*dec_args, **dec_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\dashboard.py", line 42, in dashboard_page
+    ui.html(f'''
+TypeError: Html.__init__() missing 1 required keyword-only argument: 'sanitize'
+2026-01-09 17:41:12 - nicegui - ERROR - Html.__init__() missing 1 required keyword-only argument: 'sanitize'
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    |     return create_500_error_page(e, request)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    |     raise e
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    |     result = func(*dec_args, **dec_kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\dashboard.py", line 42, in dashboard_page
+    |     ui.html(f'''
+    | TypeError: Html.__init__() missing 1 required keyword-only argument: 'sanitize'
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    return create_500_error_page(e, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    raise e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    result = func(*dec_args, **dec_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\dashboard.py", line 42, in dashboard_page
+    ui.html(f'''
+TypeError: Html.__init__() missing 1 required keyword-only argument: 'sanitize'
+2026-01-09 17:42:14 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 17:42:17 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 17:48:52 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 17:48:56 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:08:24 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 18:08:37 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:17:34 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 18:17:38 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:30:12 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 18:30:19 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:30:21 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 18:30:21 - app.pages.dashboard - ERROR - Dashboard not found: monthlydash
+2026-01-09 18:30:50 - app.pages.dashboard - ERROR - Dashboard not found: monthlydash
+2026-01-09 18:30:52 - app.pages.dashboard - ERROR - Dashboard not found: monthlydash
+2026-01-09 18:32:03 - app.pages.dashboard - ERROR - Dashboard not found: monthlydash
+2026-01-09 18:44:02 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 18:44:07 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:44:09 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 18:44:09 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:44:09 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-01-09 18:44:10 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:44:41 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:44:41 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:47:12 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 18:47:15 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:47:16 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 18:47:16 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:47:16 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-01-09 18:47:16 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:47:24 - nicegui - WARNING - http://127.0.0.1:9090/.well-known/appspecific/com.chrome.devtools.json not found
+2026-01-09 18:50:01 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 18:50:05 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:50:06 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 18:50:07 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:50:07 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-01-09 18:50:07 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:50:07 - nicegui - ERROR - Html.__init__() missing 1 required keyword-only argument: 'sanitize'
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    |     return create_500_error_page(e, request)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    |     raise e
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    |     result = func(*dec_args, **dec_kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\dashboard.py", line 74, in dashboard_page
+    |     ui.html(f'''
+    | TypeError: Html.__init__() missing 1 required keyword-only argument: 'sanitize'
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    return create_500_error_page(e, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    raise e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    result = func(*dec_args, **dec_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\dashboard.py", line 74, in dashboard_page
+    ui.html(f'''
+TypeError: Html.__init__() missing 1 required keyword-only argument: 'sanitize'
+2026-01-09 18:51:17 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 18:51:20 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:51:22 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 18:51:22 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:51:22 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-01-09 18:51:22 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:51:22 - nicegui - ERROR - HTML elements must not contain <script> tags. Use ui.add_body_html() instead.
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |   File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(value)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    |     await responder(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    |     await self.app(scope, receive, self.send_with_compression)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    |     return create_500_error_page(e, request)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    |     raise e
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    |     result = func(*dec_args, **dec_kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\dashboard.py", line 74, in dashboard_page
+    |     ui.html(f'''
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\elements\html.py", line 28, in __init__
+    |     super().__init__(tag=tag, content=content)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\elements\mixins\content_element.py", line 17, in __init__
+    |     self._handle_content_change(content)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\elements\html.py", line 33, in _handle_content_change
+    |     super()._handle_content_change(content)
+    |   File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\elements\mixins\content_element.py", line 97, in _handle_content_change
+    |     raise ValueError('HTML elements must not contain <script> tags. Use ui.add_body_html() instead.')
+    | ValueError: HTML elements must not contain <script> tags. Use ui.add_body_html() instead.
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    return create_500_error_page(e, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    raise e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    result = func(*dec_args, **dec_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\dashboard.py", line 74, in dashboard_page
+    ui.html(f'''
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\elements\html.py", line 28, in __init__
+    super().__init__(tag=tag, content=content)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\elements\mixins\content_element.py", line 17, in __init__
+    self._handle_content_change(content)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\elements\html.py", line 33, in _handle_content_change
+    super()._handle_content_change(content)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\elements\mixins\content_element.py", line 97, in _handle_content_change
+    raise ValueError('HTML elements must not contain <script> tags. Use ui.add_body_html() instead.')
+ValueError: HTML elements must not contain <script> tags. Use ui.add_body_html() instead.
+2026-01-09 18:51:26 - nicegui - WARNING - http://127.0.0.1:9090/.well-known/appspecific/com.chrome.devtools.json not found
+2026-01-09 18:52:38 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 18:52:41 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:52:43 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 18:52:44 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:52:44 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-01-09 18:52:44 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:52:50 - nicegui - WARNING - http://127.0.0.1:9090/.well-known/appspecific/com.chrome.devtools.json not found
+2026-01-09 18:55:02 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 18:55:06 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 18:55:08 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 18:55:08 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:55:08 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-01-09 18:55:08 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:58:26 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 18:58:26 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 19:01:50 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 19:01:52 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 19:01:53 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 19:01:54 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 19:01:54 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-01-09 19:01:54 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 19:02:58 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 19:02:58 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 19:06:14 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-09 19:06:17 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-09 19:06:18 - app.services.superset_service - INFO - Superset access token obtained
+2026-01-09 19:06:18 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-09 19:06:18 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-01-09 19:06:18 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7

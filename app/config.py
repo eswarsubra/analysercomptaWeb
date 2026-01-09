@@ -42,6 +42,15 @@ class Config:
         db = self.get_database_config()
         return f"mysql+pymysql://{db['username']}:{db['password']}@{db['host']}:{db['port']}/{db['database']}"
 
+    def get_superset_config(self) -> dict:
+        """Get Superset configuration for current environment."""
+        env = self.get_env()
+        return Config._config[env].get('superset', {
+            'url': 'http://localhost:8088',
+            'username': 'admin',
+            'password': 'admin'
+        })
+
 
 # Global config instance
 config = Config()

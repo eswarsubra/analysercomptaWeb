@@ -4,14 +4,16 @@ from typing import Callable
 
 def header():
     """Application header with navigation and theme toggle."""
-    with ui.header().classes('bg-primary text-white items-center justify-between px-4'):
+    with ui.header().classes(
+        'bg-gradient-to-r from-blue-700 to-indigo-800 text-white items-center justify-between px-6 shadow-lg'
+    ):
         # Logo and title
-        with ui.row().classes('items-center gap-2'):
-            ui.image('/static/isotipo-preferente-color_positivo.png').classes('w-8 h-8')
-            ui.label('AnalyzerCompta').classes('text-lg font-bold')
+        with ui.row().classes('items-center gap-3'):
+            ui.image('/static/isotipo-preferente-color_positivo.png').classes('w-9 h-9')
+            ui.label('AnalyzerCompta').classes('text-xl font-bold tracking-wide')
 
         # Navigation items
-        with ui.row().classes('items-center gap-1'):
+        with ui.row().classes('items-center gap-2'):
             # Dashboard - direct link
             _nav_item('Dashboard', 'dashboard', '/')
 
@@ -26,21 +28,26 @@ def header():
             # Transactions dropdown menu
             _nav_dropdown('Transactions', 'account_balance', [
                 ('View Transactions', 'list_alt', '/transactions'),
+                ('Explore Transactions', 'explore', '/transactions/explore'),
             ])
 
-            # Sales dropdown menu (placeholder for future)
-            _nav_dropdown('Sales', 'point_of_sale', [])
+            # Sales dropdown menu
+            _nav_dropdown('Sales', 'point_of_sale', [
+                ('Explore Sales', 'explore', '/sales/explore'),
+            ])
 
         # Theme toggle
         with ui.row().classes('items-center'):
             dark_mode = ui.dark_mode()
-            ui.button(icon='dark_mode', on_click=dark_mode.toggle).props('flat round dense')
+            ui.button(icon='dark_mode', on_click=dark_mode.toggle).props('flat round dense').classes(
+                'hover:bg-white/20 transition-colors'
+            )
 
 
 def _nav_item(label: str, icon: str, path: str, highlight: bool = False):
     """Create a navigation item for the top bar."""
     props = 'flat dense'
-    classes = 'text-white'
+    classes = 'text-white hover:bg-white/20 rounded-lg transition-colors duration-150'
     if highlight:
         classes += ' bg-amber-600'
 
@@ -59,16 +66,27 @@ def _nav_dropdown(label: str, icon: str, items: list[tuple[str, str, str]]):
         icon: Menu button icon
         items: List of tuples (label, icon, path) for menu items
     """
-    with ui.button(label, icon=icon).props('flat dense').classes('text-white'):
-        with ui.menu().classes('bg-white dark:bg-gray-800'):
+    with ui.button(label, icon=icon).props('flat dense dropdown-icon="expand_more"').classes(
+        'text-white hover:bg-white/20 rounded-lg transition-colors duration-150'
+    ):
+        with ui.menu().props('transition-show="jump-down" transition-hide="jump-up"').classes(
+            'rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 '
+            'bg-white dark:bg-gray-800 min-w-48'
+        ):
             if items:
                 for item_label, item_icon, item_path in items:
-                    ui.menu_item(
-                        item_label,
-                        on_click=lambda p=item_path: ui.navigate.to(p)
-                    ).props(f'icon="{item_icon}"').classes('text-gray-800 dark:text-gray-200')
+                    with ui.menu_item(on_click=lambda p=item_path: ui.navigate.to(p)).classes(
+                        'hover:bg-blue-50 dark:hover:bg-gray-700 rounded-md mx-1 my-0.5 '
+                        'transition-colors duration-150'
+                    ):
+                        with ui.row().classes('items-center gap-3 px-2 py-1'):
+                            ui.icon(item_icon).classes('text-blue-600 dark:text-blue-400 text-lg')
+                            ui.label(item_label).classes('text-gray-700 dark:text-gray-200 font-medium')
             else:
-                ui.menu_item('Coming soon...').props('disable').classes('text-gray-400')
+                with ui.menu_item().props('disable').classes('mx-1'):
+                    with ui.row().classes('items-center gap-3 px-2 py-1'):
+                        ui.icon('hourglass_empty').classes('text-gray-400 text-lg')
+                        ui.label('Coming soon...').classes('text-gray-400 italic')
 
 
 def layout(title: str = ''):

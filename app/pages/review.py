@@ -192,15 +192,20 @@ def review_page():
             ui.notify(f"Error: {e}", type='negative')
 
     def undo_facture():
-        if filters['facture']:
+        # Use filter facture, or fall back to selected row's facture
+        facture_id = filters['facture']
+        if not facture_id and selected_rows:
+            facture_id = selected_rows[0].get('idFacture')
+
+        if facture_id:
             try:
-                NewProductsService.undo_facture(filters['facture'])
-                ui.notify(f"Facture {filters['facture']} undone", type='positive')
+                NewProductsService.undo_facture(facture_id)
+                ui.notify(f"Facture {facture_id} undone", type='positive')
                 load_products()
             except Exception as e:
                 ui.notify(f"Error: {e}", type='negative')
         else:
-            ui.notify("Select a facture first", type='warning')
+            ui.notify("Select a facture from the dropdown or select a row first", type='warning')
 
     def purge_closed():
         try:

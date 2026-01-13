@@ -1417,3 +1417,63 @@ ValueError: HTML elements must not contain <script> tags. Use ui.add_body_html()
 2026-01-09 19:06:18 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
 2026-01-09 19:06:18 - app.services.superset_service - INFO - Superset CSRF token obtained
 2026-01-09 19:06:18 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-11 20:39:49 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-11 20:40:07 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-11 20:40:12 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-01-11 20:40:12 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-01-11 22:09:42 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-11 22:12:18 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-01-11 22:12:44 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 2, 'ignored': 0, 'full_ignored': 0, 'errors': 0, 'duplicates_converted': 0}
+2026-01-11 22:16:43 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-01-12 12:09:12 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-01-12 12:09:15 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-01-12 12:09:24 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-01-12 12:09:24 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-01-12 12:09:38 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 13, 'ignored': 0, 'full_ignored': 1, 'errors': 0, 'duplicates_converted': 0}
+2026-01-12 13:14:25 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 14, 'ignored': 2, 'full_ignored': 0, 'errors': 0, 'duplicates_converted': 0}
+2026-01-12 14:40:50 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-01-12 19:11:15 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-01-12 19:26:32 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 7, 'ignored': 0, 'full_ignored': 0, 'errors': 0, 'duplicates_converted': 0}
+2026-01-12 20:09:46 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 5, 'ignored': 0, 'full_ignored': 0, 'errors': 0, 'duplicates_converted': 0}
+2026-01-12 20:09:51 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-01-12 20:12:28 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 2, 'ignored': 1, 'full_ignored': 1, 'errors': 0, 'duplicates_converted': 0}
+2026-01-12 20:15:38 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 6, 'ignored': 0, 'full_ignored': 0, 'errors': 0, 'duplicates_converted': 0}
+2026-01-12 20:16:34 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 5, 'ignored': 0, 'full_ignored': 1, 'errors': 0, 'duplicates_converted': 0}
+2026-01-12 20:17:30 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 1, 'ignored': 0, 'full_ignored': 4, 'errors': 0, 'duplicates_converted': 0}
+2026-01-12 20:18:44 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 5, 'ignored': 2, 'full_ignored': 0, 'errors': 0, 'duplicates_converted': 2}
+2026-01-12 20:24:25 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 3, 'ignored': 5, 'full_ignored': 9, 'errors': 0, 'duplicates_converted': 0}

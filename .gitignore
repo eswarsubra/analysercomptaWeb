@@ -25,4 +25,4 @@ docker-compose.yml
 .env
 .docker-build/
 nul
-.log
+*.log

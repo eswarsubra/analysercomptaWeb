@@ -57,3 +57,7 @@
 2026-01-09 18:22:07 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
 2026-01-09 18:22:07 - app.services.superset_service - INFO - Superset CSRF token obtained
 2026-01-09 18:22:07 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-01-13 19:09:15 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-01-13 19:09:17 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-01-13 19:11:12 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-01-13 19:11:12 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))

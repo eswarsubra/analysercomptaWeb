@@ -54,7 +54,14 @@ def explore_sales_page():
 
         # Fetch payments from database
         update_status('Loading payments...')
-        state['payments_data'] = SalesService.get_payments_for_date_range(date_from, date_to)
+        payments_data = SalesService.get_payments_for_date_range(date_from, date_to)
+
+        # Calculate and prepend totals row
+        totals_row = calculate_payments_totals(payments_data)
+        if totals_row:
+            state['payments_data'] = [totals_row] + payments_data
+        else:
+            state['payments_data'] = payments_data
 
         # Fetch product summary (all for period initially)
         state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
@@ -78,6 +85,23 @@ def explore_sales_page():
         if refs['products_table']:
             refs['products_table'].update_rows(state['products_data'])
 
+    def calculate_payments_totals(data):
+        """Calculate totals for payments columns."""
+        if not data:
+            return None
+        return {
+            'SalesPaymentsID': 'TOTAL',
+            'startDate': 'TOTAL',
+            'AdditionID': '',
+            'TotalCaisse': sum(row.get('TotalCaisse', 0) or 0 for row in data),
+            'CB': sum(row.get('CB', 0) or 0 for row in data),
+            'CHEQUE': sum(row.get('CHEQUE', 0) or 0 for row in data),
+            'CASH': sum(row.get('CASH', 0) or 0 for row in data),
+            'TR': sum(row.get('TR', 0) or 0 for row in data),
+            'AX': sum(row.get('AX', 0) or 0 for row in data),
+            'CTR': sum(row.get('CTR', 0) or 0 for row in data),
+        }
+
     def on_payment_click(e):
         """Handle click on payment row to filter products by date."""
         if not e.args:
@@ -87,6 +111,16 @@ def explore_sales_page():
         clicked_date_str = row.get('startDate')
 
         if not clicked_date_str:
+            return
+
+        # Handle TOTAL row - same as deselecting (show all products)
+        if clicked_date_str == 'TOTAL':
+            state['selected_date'] = None
+            state['products_data'] = SalesService.get_product_sales_summary(
+                state['date_from'], state['date_to']
+            )
+            update_products_table()
+            update_selection_label()
             return
 
         # Parse the date string
@@ -175,35 +209,47 @@ def explore_sales_page():
                 refs['payments_table'].add_slot('body', '''
                     <q-tr :props="props"
                           @click="$parent.$emit('rowClick', {row: props.row})"
-                          class="cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-700">
+                          :class="props.row.startDate === 'TOTAL' ? 'bg-blue-100 dark:bg-blue-900 font-bold cursor-pointer hover:bg-blue-200' : 'cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-700'">
                         <q-td key="startDate" :props="props">
-                            <span class="font-medium">{{ props.row.startDate }}</span>
+                            <span :class="props.row.startDate === 'TOTAL' ? 'font-bold text-blue-800 dark:text-blue-200' : 'font-medium'">{{ props.row.startDate }}</span>
                         </q-td>
                         <q-td key="AdditionID" :props="props">
                             {{ props.row.AdditionID }}
                         </q-td>
                         <q-td key="TotalCaisse" :props="props" class="text-right">
-                            <span class="font-semibold text-green-600">
+                            <span :class="props.row.startDate === 'TOTAL' ? 'font-bold text-blue-800 dark:text-blue-200' : 'font-semibold text-green-600'">
                                 {{ props.row.TotalCaisse ? props.row.TotalCaisse.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
                             </span>
                         </q-td>
                         <q-td key="CB" :props="props" class="text-right">
-                            {{ props.row.CB ? props.row.CB.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            <span :class="props.row.startDate === 'TOTAL' ? 'font-bold' : ''">
+                                {{ props.row.CB ? props.row.CB.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            </span>
                         </q-td>
                         <q-td key="CHEQUE" :props="props" class="text-right">
-                            {{ props.row.CHEQUE ? props.row.CHEQUE.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            <span :class="props.row.startDate === 'TOTAL' ? 'font-bold' : ''">
+                                {{ props.row.CHEQUE ? props.row.CHEQUE.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            </span>
                         </q-td>
                         <q-td key="CASH" :props="props" class="text-right">
-                            {{ props.row.CASH ? props.row.CASH.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            <span :class="props.row.startDate === 'TOTAL' ? 'font-bold' : ''">
+                                {{ props.row.CASH ? props.row.CASH.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            </span>
                         </q-td>
                         <q-td key="TR" :props="props" class="text-right">
-                            {{ props.row.TR ? props.row.TR.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            <span :class="props.row.startDate === 'TOTAL' ? 'font-bold' : ''">
+                                {{ props.row.TR ? props.row.TR.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            </span>
                         </q-td>
                         <q-td key="AX" :props="props" class="text-right">
-                            {{ props.row.AX ? props.row.AX.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            <span :class="props.row.startDate === 'TOTAL' ? 'font-bold' : ''">
+                                {{ props.row.AX ? props.row.AX.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            </span>
                         </q-td>
                         <q-td key="CTR" :props="props" class="text-right">
-                            {{ props.row.CTR ? props.row.CTR.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            <span :class="props.row.startDate === 'TOTAL' ? 'font-bold' : ''">
+                                {{ props.row.CTR ? props.row.CTR.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                            </span>
                         </q-td>
                     </q-tr>
                 ''')
@@ -218,6 +264,8 @@ def explore_sales_page():
                     {'name': 'ProductName', 'label': 'Product Name', 'field': 'ProductName', 'align': 'left', 'sortable': True},
                     {'name': 'Quantity', 'label': 'Quantity', 'field': 'Quantity', 'align': 'right', 'sortable': True},
                     {'name': 'TotalSales', 'label': 'Total Sales', 'field': 'TotalSales', 'align': 'right', 'sortable': True},
+                    {'name': 'TVA', 'label': 'TVA %', 'field': 'TVA', 'align': 'center', 'sortable': True},
+                    {'name': 'TVAAmount', 'label': 'TVA Amount', 'field': 'TVAAmount', 'align': 'right', 'sortable': True},
                 ]
 
                 refs['products_table'] = ui.table(
@@ -241,6 +289,24 @@ def explore_sales_page():
                     <q-td :props="props" class="text-right">
                         <span class="font-semibold text-green-600">
                             {{ props.row.TotalSales ? props.row.TotalSales.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
+                        </span>
+                    </q-td>
+                ''')
+
+                # Custom slot for TVA rate
+                refs['products_table'].add_slot('body-cell-TVA', '''
+                    <q-td :props="props" class="text-center">
+                        <span class="font-medium">
+                            {{ props.row.TVA ? props.row.TVA + '%' : '-' }}
+                        </span>
+                    </q-td>
+                ''')
+
+                # Custom slot for TVAAmount with currency formatting
+                refs['products_table'].add_slot('body-cell-TVAAmount', '''
+                    <q-td :props="props" class="text-right">
+                        <span class="font-semibold text-amber-600">
+                            {{ props.row.TVAAmount ? props.row.TVAAmount.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €' : '0.00 €' }}
                         </span>
                     </q-td>
                 ''')

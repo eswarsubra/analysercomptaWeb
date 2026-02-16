@@ -129,3 +129,19 @@ class BankInstructionService:
         """
         with get_db() as db:
             return CoreBankService.build_monthly_summary(db, month, year)
+
+    @staticmethod
+    def get_cb_grouped_by_date(month: int, year: int) -> list[dict]:
+        """Get CB transactions grouped by Date_operation with parsed amounts.
+
+        Args:
+            month: Month number (1-12)
+            year: Year (e.g., 2025)
+
+        Returns:
+            List of dicts with columns:
+            Type, Qualifier, Date_Compta_Range, Date_operation,
+            Date_Valeur_Range, SumMontant, SumBrutMontant, SumCommisionMontant
+        """
+        with get_db() as db:
+            return CoreBankService.get_cb_transactions_grouped_by_date(db, month, year)

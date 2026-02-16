@@ -61,3 +61,5 @@
 2026-01-13 19:09:17 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
 2026-01-13 19:11:12 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
 2026-01-13 19:11:12 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-02-12 21:20:56 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-02-12 21:20:58 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099

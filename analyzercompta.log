@@ -1481,3 +1481,225 @@ ConnectionResetError: [WinError 10054] Une connexion existante a dû être ferm�
 2026-01-14 21:07:57 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
 2026-01-14 21:08:02 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
 2026-01-14 21:08:02 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-01-14 22:06:57 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 4, 'ignored': 1, 'full_ignored': 5, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 19:06:56 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-14 19:07:12 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-14 19:07:17 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-14 19:07:17 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-14 19:09:24 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-14 19:09:25 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-14 19:09:30 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-14 19:09:30 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-14 19:09:46 - nicegui - ERROR - could not convert string to float: '10%'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 67, in load_data
+    state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\sales_service.py", line 46, in get_product_sales_summary
+    results = CoreSalesService.get_product_sales_summary(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\sales_service.py", line 623, in get_product_sales_summary
+    'TVA': float(row.TVA) if row.TVA else 0.0,
+           ^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10%'
+2026-02-14 19:09:51 - nicegui - ERROR - could not convert string to float: '10%'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 67, in load_data
+    state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\sales_service.py", line 46, in get_product_sales_summary
+    results = CoreSalesService.get_product_sales_summary(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\sales_service.py", line 623, in get_product_sales_summary
+    'TVA': float(row.TVA) if row.TVA else 0.0,
+           ^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10%'
+2026-02-14 19:10:01 - nicegui - ERROR - could not convert string to float: '10%'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 67, in load_data
+    state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\sales_service.py", line 46, in get_product_sales_summary
+    results = CoreSalesService.get_product_sales_summary(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\sales_service.py", line 623, in get_product_sales_summary
+    'TVA': float(row.TVA) if row.TVA else 0.0,
+           ^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10%'
+2026-02-14 19:10:02 - nicegui - ERROR - could not convert string to float: '10%'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 67, in load_data
+    state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\sales_service.py", line 46, in get_product_sales_summary
+    results = CoreSalesService.get_product_sales_summary(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\sales_service.py", line 623, in get_product_sales_summary
+    'TVA': float(row.TVA) if row.TVA else 0.0,
+           ^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10%'
+2026-02-14 19:10:02 - nicegui - ERROR - could not convert string to float: '10%'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 67, in load_data
+    state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\sales_service.py", line 46, in get_product_sales_summary
+    results = CoreSalesService.get_product_sales_summary(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\sales_service.py", line 623, in get_product_sales_summary
+    'TVA': float(row.TVA) if row.TVA else 0.0,
+           ^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10%'
+2026-02-14 19:10:02 - nicegui - ERROR - could not convert string to float: '10%'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 67, in load_data
+    state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\sales_service.py", line 46, in get_product_sales_summary
+    results = CoreSalesService.get_product_sales_summary(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\sales_service.py", line 623, in get_product_sales_summary
+    'TVA': float(row.TVA) if row.TVA else 0.0,
+           ^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10%'
+2026-02-14 19:10:11 - nicegui - ERROR - could not convert string to float: '10%'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 67, in load_data
+    state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\sales_service.py", line 46, in get_product_sales_summary
+    results = CoreSalesService.get_product_sales_summary(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\sales_service.py", line 623, in get_product_sales_summary
+    'TVA': float(row.TVA) if row.TVA else 0.0,
+           ^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10%'
+2026-02-16 20:38:09 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-16 20:38:12 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-16 20:38:16 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:38:16 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:38:20 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-02-16 20:38:32 - nicegui - ERROR - 'Date_operation'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 440, in handle_event
+    result = cast(Callable[[EventT], Any], handler)(arguments)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_transactions.py", line 179, in on_summary_click
+    state['cb_grouped_data'] = BankInstructionService.get_cb_grouped_by_date(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\bank_instruction_service.py", line 147, in get_cb_grouped_by_date
+    return CoreBankService.get_cb_transactions_grouped_by_date(db, month, year)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\bank_service.py", line 251, in get_cb_transactions_grouped_by_date
+    grouped = df.groupby('Date_operation').agg({
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pandas\core\frame.py", line 9210, in groupby
+    return DataFrameGroupBy(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pandas\core\groupby\groupby.py", line 1331, in __init__
+    grouper, exclusions, obj = get_grouper(
+                               ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pandas\core\groupby\grouper.py", line 1043, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'Date_operation'
+2026-02-16 20:40:56 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-16 20:40:57 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-16 20:41:02 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:41:02 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:41:17 - nicegui - ERROR - Type is not JSON serializable: Timestamp
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 59, in _orjson_converter
+    raise TypeError(f'Object of type {obj.__class__.__name__} is not JSON serializable')
+TypeError: Object of type Timestamp is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 118, in loop
+    await coro
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\outbox.py", line 131, in _emit
+    await core.sio.emit(message_type, data, room=client_id)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_server.py", line 179, in emit
+    await self.manager.emit(event, data, namespace, room=room,
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\async_manager.py", line 40, in emit
+    encoded_packet = pkt.encode()
+                     ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\socketio\packet.py", line 64, in encode
+    encoded_packet += self.json.dumps(data, separators=(',', ':'))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\json\orjson_wrapper.py", line 40, in dumps
+    return orjson.dumps(obj, option=opts, default=_orjson_converter).decode('utf-8')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Type is not JSON serializable: Timestamp
+2026-02-16 20:42:33 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-16 20:42:35 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-16 20:42:39 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:42:39 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:50:29 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-16 20:50:30 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-16 20:50:35 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:50:35 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:53:29 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-16 20:53:30 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-16 20:53:35 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:53:35 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:57:14 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-16 20:57:15 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-16 20:57:20 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:57:20 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:58:27 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-02-16 20:59:36 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-16 20:59:37 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-16 20:59:42 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:59:42 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 20:59:44 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-02-16 21:01:02 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-16 21:01:03 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-16 21:01:08 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 21:01:08 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 21:06:58 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-16 21:06:59 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-16 21:07:04 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-16 21:07:04 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))

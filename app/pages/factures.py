@@ -137,6 +137,7 @@ def factures_page():
 
         # Populate items
         edit_items_container.clear()
+        form_items.clear()
         with edit_items_container:
             for item in facture.get('items', []):
                 _add_item_row_edit(item, facture['idsupplier'])

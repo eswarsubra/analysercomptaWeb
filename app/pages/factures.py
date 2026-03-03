@@ -13,14 +13,19 @@ def factures_page():
     # State
     factures_data = []
     table_ref = {'table': None}
-    filters = {'supplier': None, 'date_from': None, 'date_to': None}
+    filters = {'supplier': None, 'date_from': None, 'date_to': None, 'product': None}
     current_facture = {'data': None}
 
-    # Get supplier filter from URL if present
+    # Get filters from URL if present
     query_string = ui.context.client.request.query_params
     if 'supplier' in query_string:
         try:
             filters['supplier'] = int(query_string['supplier'])
+        except (ValueError, TypeError):
+            pass
+    if 'product' in query_string:
+        try:
+            filters['product'] = int(query_string['product'])
         except (ValueError, TypeError):
             pass
 
@@ -44,7 +49,8 @@ def factures_page():
         factures_data = FactureService.get_all(
             supplier_id=filters['supplier'],
             date_from=filters['date_from'],
-            date_to=filters['date_to']
+            date_to=filters['date_to'],
+            product_id=filters['product']
         )
         if table_ref['table']:
             table_ref['table'].update_rows(factures_data)
@@ -602,11 +608,24 @@ def _render_facture_detail(facture: dict, dialog):
                 {'name': 'unitPriceSnap', 'label': 'Unit', 'field': 'unitPriceSnap', 'align': 'right'},
                 {'name': 'itemPrice', 'label': 'Total', 'field': 'itemPrice', 'align': 'right'},
             ]
-            ui.table(
+            items_table = ui.table(
                 columns=item_columns,
                 rows=facture['items'],
                 row_key='idsupplierfactitem'
             ).classes('w-full')
+
+            # Clickable product code - navigates to products page with highlight
+            items_table.add_slot('body-cell-product_code', '''
+                <q-td :props="props">
+                    <a v-if="props.row.product_code" class="text-primary hover:underline cursor-pointer"
+                       @click.stop="$parent.$emit('goto-product', props.row.idsupplierproduct)">
+                        {{ props.row.product_code }}
+                    </a>
+                    <span v-else class="text-grey-5">-</span>
+                </q-td>
+            ''')
+
+            items_table.on('goto-product', lambda e: ui.navigate.to(f'/products?highlight={e.args}') if e.args else None)
 
 
 def _detail_field(label: str, value):

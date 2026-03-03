@@ -12,21 +12,31 @@ def products_page():
     selected_product = {'id': None, 'data': None}
     table_ref = {'table': None}
     filters = {'supplier': None, 'category': None}
+    highlight_id = {'value': None}
 
-    # Get supplier filter from URL if present
+    # Get URL parameters
     query_string = ui.context.client.request.query_params
     if 'supplier' in query_string:
         try:
             filters['supplier'] = int(query_string['supplier'])
         except (ValueError, TypeError):
             pass
+    if 'highlight' in query_string:
+        try:
+            highlight_id['value'] = int(query_string['highlight'])
+        except (ValueError, TypeError):
+            pass
 
     def load_products():
         nonlocal products_data
-        products_data = ProductService.get_all(
-            supplier_id=filters['supplier'],
-            category=filters['category']
-        )
+        if highlight_id['value']:
+            product = ProductService.get_by_id(highlight_id['value'])
+            products_data = [product] if product else []
+        else:
+            products_data = ProductService.get_all(
+                supplier_id=filters['supplier'],
+                category=filters['category']
+            )
         if table_ref['table']:
             table_ref['table'].update_rows(products_data)
 
@@ -128,6 +138,7 @@ def products_page():
             {'name': 'tva', 'label': 'TVA', 'field': 'tva', 'align': 'center'},
             {'name': 'category', 'label': 'Category', 'field': 'category', 'align': 'left'},
             {'name': 'supplier_name', 'label': 'Supplier', 'field': 'supplier_name', 'align': 'left'},
+            {'name': 'facture_count', 'label': 'Factures', 'field': 'facture_count', 'align': 'center', 'sortable': True},
         ]
 
         table_ref['table'] = ui.table(
@@ -138,6 +149,16 @@ def products_page():
             on_select=on_row_select,
             pagination=20
         ).classes('w-full')
+
+        # Highlight row for highlighted product
+        table_ref['table'].add_slot('body-cell-code', '''
+            <q-td :props="props" :class="props.row._highlighted ? 'bg-blue-100 dark:bg-blue-900' : ''">
+                <span :class="props.row._highlighted ? 'font-bold text-blue-700 dark:text-blue-300' : ''">
+                    {{ props.row.code }}
+                </span>
+                <q-badge v-if="props.row._highlighted" color="blue" class="q-ml-xs">VIEWING</q-badge>
+            </q-td>
+        ''')
 
         # Clickable supplier name - navigates to supplier page
         table_ref['table'].add_slot('body-cell-supplier_name', '''
@@ -151,6 +172,19 @@ def products_page():
         ''')
 
         table_ref['table'].on('goto-supplier', lambda e: ui.navigate.to(f'/suppliers?highlight={e.args}') if e.args else None)
+
+        # Clickable facture count - navigates to factures filtered by product
+        table_ref['table'].add_slot('body-cell-facture_count', '''
+            <q-td :props="props" class="text-center">
+                <a v-if="props.row.facture_count > 0" class="text-primary hover:underline cursor-pointer"
+                   @click.stop="$parent.$emit('goto-factures', props.row.idsupplierproduct)">
+                    {{ props.row.facture_count }}
+                </a>
+                <span v-else class="text-grey-5">0</span>
+            </q-td>
+        ''')
+
+        table_ref['table'].on('goto-factures', lambda e: ui.navigate.to(f'/factures?product={e.args}') if e.args else None)
 
         # Create dialog
         create_fields = {}

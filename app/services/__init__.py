@@ -5,6 +5,7 @@ from app.services.newproducts_service import NewProductsService
 from app.services.bank_instruction_service import BankInstructionService
 from app.services.sales_service import SalesService
 from app.services.superset_service import SupersetService
+from app.services.reconciliation_service import ReconciliationService
 
 __all__ = [
     'SupplierService',
@@ -14,4 +15,5 @@ __all__ = [
     'BankInstructionService',
     'SalesService',
     'SupersetService',
+    'ReconciliationService',
 ]

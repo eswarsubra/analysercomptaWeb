@@ -36,6 +36,11 @@ def header():
                 ('Explore Sales', 'explore', '/sales/explore'),
             ])
 
+            # Analytics dropdown menu
+            _nav_dropdown('Analytics', 'analytics', [
+                ('Reconciliation', 'compare_arrows', '/analytics/reconciliation'),
+            ])
+
         # Theme toggle
         with ui.row().classes('items-center'):
             dark_mode = ui.dark_mode()

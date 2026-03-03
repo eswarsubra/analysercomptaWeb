@@ -4,5 +4,6 @@ pymysql>=1.1.0
 pyyaml>=6.0.0
 python-dateutil>=2.8.0
 requests>=2.31.0
+boto3>=1.34.0
 # Local package - install with: pip install -e ../AnalyserComptaCore
 analysercomptacore

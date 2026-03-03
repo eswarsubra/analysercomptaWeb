@@ -6,6 +6,7 @@ from app.pages.review import review_page
 from app.pages.transactions import transactions_page
 from app.pages.explore_transactions import explore_transactions_page
 from app.pages.explore_sales import explore_sales_page
+from app.pages.reconciliation import reconciliation_page
 
 __all__ = [
     'dashboard_page',
@@ -16,4 +17,5 @@ __all__ = [
     'transactions_page',
     'explore_transactions_page',
     'explore_sales_page',
+    'reconciliation_page',
 ]

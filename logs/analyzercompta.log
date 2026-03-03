@@ -63,3 +63,42 @@
 2026-01-13 19:11:12 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
 2026-02-12 21:20:56 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
 2026-02-12 21:20:58 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-02-12 21:21:43 - app.services.superset_service - INFO - Superset access token obtained
+2026-02-12 21:21:43 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-02-12 21:21:43 - app.services.superset_service - INFO - Superset CSRF token obtained
+2026-02-12 21:21:43 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-02-12 21:23:16 - app.services.superset_service - INFO - Found dashboard "monthlydash" with embedded UUID: 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-02-12 21:23:16 - app.services.superset_service - INFO - Guest token generated for dashboard 88685a76-b615-45e0-8c71-5a7c5638f9b7
+2026-02-14 09:25:29 - app.services.superset_service - ERROR - Failed to get dashboard UUID: 401 Client Error: UNAUTHORIZED for url: http://host.docker.internal:8088/api/v1/dashboard/
+2026-02-14 09:25:29 - app.pages.dashboard - ERROR - Dashboard not found: monthlydash
+2026-02-14 09:25:58 - app.services.superset_service - ERROR - Failed to get dashboard UUID: 401 Client Error: UNAUTHORIZED for url: http://host.docker.internal:8088/api/v1/dashboard/
+2026-02-14 09:25:58 - app.pages.dashboard - ERROR - Dashboard not found: monthlydash
+2026-02-14 09:41:44 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 12, 'ignored': 6, 'full_ignored': 18, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 09:52:06 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 5, 'ignored': 7, 'full_ignored': 19, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 09:57:38 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 14, 'ignored': 4, 'full_ignored': 11, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 09:58:37 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 4, 'ignored': 3, 'full_ignored': 5, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 10:02:57 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 8, 'ignored': 8, 'full_ignored': 14, 'errors': 0, 'duplicates_converted': 1}
+2026-02-14 10:06:17 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 2, 'ignored': 6, 'full_ignored': 15, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 10:07:38 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 3, 'ignored': 0, 'full_ignored': 30, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 10:13:28 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 3, 'ignored': 13, 'full_ignored': 40, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 10:14:05 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 1, 'ignored': 9, 'full_ignored': 42, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 10:14:18 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 0, 'ignored': 2, 'full_ignored': 15, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 10:34:14 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 0, 'ignored': 6, 'full_ignored': 5, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 10:37:44 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 0, 'ignored': 2, 'full_ignored': 4, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 10:37:59 - app.services.newproducts_service - INFO - Resolved staging anomalies: {'created': 0, 'ignored': 1, 'full_ignored': 7, 'errors': 0, 'duplicates_converted': 0}
+2026-02-14 10:49:52 - app.services.superset_service - ERROR - Failed to get dashboard UUID: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/dashboard/ (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-02-14 10:49:52 - app.pages.dashboard - ERROR - Dashboard not found: monthlydash
+2026-02-14 16:08:56 - app.services.superset_service - ERROR - Failed to get dashboard UUID: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/dashboard/ (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-02-14 16:08:56 - app.pages.dashboard - ERROR - Dashboard not found: monthlydash
+2026-02-16 21:27:03 - app.services.superset_service - ERROR - Failed to get dashboard UUID: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/dashboard/ (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-02-16 21:27:03 - app.pages.dashboard - ERROR - Dashboard not found: monthlydash
+2026-03-02 11:38:04 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-03-02 11:38:06 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099
+2026-03-02 11:38:39 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-03-02 11:38:39 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-03-02 18:50:23 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-03-02 18:50:23 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-03-02 23:40:23 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-03-02 23:40:23 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='host.docker.internal', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='host.docker.internal', port=8088): Failed to establish a new connection: [Errno 101] Network is unreachable"))
+2026-03-03 19:33:44 - root - INFO - Logging initialized - file: /app/logs/analyzercompta.log
+2026-03-03 19:33:47 - __main__ - INFO - Starting AnalyzerComptaWeb on port 8099

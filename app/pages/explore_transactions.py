@@ -99,9 +99,9 @@ def explore_transactions_page():
             total_commission = sum(row.get('SumCommisionMontant', 0) or 0 for row in data)
 
             if refs['total_montant_label']:
-                refs['total_montant_label'].set_text(f"Total Montant: {format_euro(total_montant)}")
+                refs['total_montant_label'].set_text(f"Total Net Montant: {format_euro(total_montant)}")
             if refs['total_brut_label']:
-                refs['total_brut_label'].set_text(f"Brut: {format_euro(total_brut)}")
+                refs['total_brut_label'].set_text(f"Total Brut Montant: {format_euro(total_brut)}")
                 refs['total_brut_label'].set_visibility(True)
             if refs['total_commission_label']:
                 refs['total_commission_label'].set_text(f"Commission: {format_euro(total_commission)}")

@@ -11,10 +11,11 @@ class FactureService:
     @staticmethod
     def get_all(supplier_id: Optional[int] = None,
                 date_from: Optional[datetime] = None,
-                date_to: Optional[datetime] = None) -> list[dict]:
+                date_to: Optional[datetime] = None,
+                product_id: Optional[int] = None) -> list[dict]:
         """Get all factures, optionally filtered."""
         with get_db() as db:
-            return CoreSupplierService.get_all_factures(db, supplier_id, date_from, date_to)
+            return CoreSupplierService.get_all_factures(db, supplier_id, date_from, date_to, product_id=product_id)
 
     @staticmethod
     def get_by_id(facture_id: int) -> Optional[dict]:

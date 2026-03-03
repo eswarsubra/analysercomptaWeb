@@ -1703,3 +1703,98 @@ ConnectionResetError: [WinError 10054] Une connexion existante a dû être ferm�
 2026-02-16 21:06:59 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
 2026-02-16 21:07:04 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
 2026-02-16 21:07:04 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-18 19:38:15 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-18 19:38:18 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-18 19:38:23 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-18 19:38:23 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-18 19:39:59 - nicegui - ERROR - could not convert string to float: '10%'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 67, in load_data
+    state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\sales_service.py", line 46, in get_product_sales_summary
+    results = CoreSalesService.get_product_sales_summary(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\sales_service.py", line 623, in get_product_sales_summary
+    'TVA': float(row.TVA) if row.TVA else 0.0,
+           ^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10%'
+2026-02-18 19:40:23 - nicegui - ERROR - could not convert string to float: '10%'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\explore_sales.py", line 67, in load_data
+    state['products_data'] = SalesService.get_product_sales_summary(date_from, date_to)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\sales_service.py", line 46, in get_product_sales_summary
+    results = CoreSalesService.get_product_sales_summary(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\sales_service.py", line 623, in get_product_sales_summary
+    'TVA': float(row.TVA) if row.TVA else 0.0,
+           ^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '10%'
+2026-02-18 19:52:07 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-02-18 19:52:08 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-02-18 19:52:13 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-18 19:52:13 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-18 20:10:02 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-02-18 20:10:02 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 18:52:49 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-02 18:53:05 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-02 18:53:10 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 18:53:10 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 18:58:50 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-02 18:58:51 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-02 18:58:55 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 18:58:55 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 19:42:26 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-02 19:42:27 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-02 19:42:32 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 19:42:32 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 20:02:10 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-02 20:02:11 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-02 20:02:16 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 20:02:16 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 23:55:30 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-02 23:55:31 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-02 23:55:36 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-02 23:55:36 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 00:05:40 - app.services.llm_service - ERROR - Ollama error: 404 Client Error: Not Found for url: http://localhost:11434/api/chat
+2026-03-03 00:36:49 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-03 00:36:50 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-03 00:36:55 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 00:36:55 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 19:39:54 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-03 19:39:56 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-03 19:40:01 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 19:40:01 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 19:40:35 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-03 19:40:36 - app.services.llm_service - ERROR - Bedrock error: An error occurred (ValidationException) when calling the InvokeModel operation: The provided model identifier is invalid.
+2026-03-03 19:46:11 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-03 19:46:12 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-03 19:46:17 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 19:46:17 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 19:46:54 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-03 19:46:54 - app.services.llm_service - ERROR - Bedrock error: An error occurred (ValidationException) when calling the InvokeModel operation: The provided model identifier is invalid.
+2026-03-03 19:57:31 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-03 19:57:32 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-03 19:57:37 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 19:57:37 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 20:01:41 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-03 20:01:42 - app.services.llm_service - ERROR - Bedrock error: An error occurred (ValidationException) when calling the InvokeModel operation: The provided model identifier is invalid.
+2026-03-03 20:15:52 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\installs\PY3.12\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\installs\PY3.12\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] Une connexion existante a dû être fermée par l’hôte distant
+2026-03-03 20:30:36 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-03 20:30:37 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-03 20:30:42 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-03 20:30:42 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))

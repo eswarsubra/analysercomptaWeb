@@ -1,9 +1,13 @@
+import logging
+import re
 from nicegui import ui
 from datetime import datetime
 from app.components.layout import layout
-from app.services import FactureService, SupplierService, ProductService
+from app.services import FactureService, SupplierService, ProductService, ScanSessionStore, OutboundMatchService
 from app.database import get_db
-from app.models import SupplierFacture, SupplierFactItem
+from app.models import SupplierFacture, SupplierFactItem, SupplierProduct
+
+logger = logging.getLogger(__name__)
 
 
 @ui.page('/factures')
@@ -98,6 +102,7 @@ def factures_page():
         form_data['factmontantttc'] = 0
         form_data['filename'] = ''
         form_data['items'] = []
+        form_data['imported_receipt_id'] = None
         form_items.clear()
 
         create_supplier_select.value = None
@@ -203,6 +208,64 @@ def factures_page():
             item_data['itemprice_input'] = itemprice_input
             form_items.append(item_data)
 
+    def _add_imported_item_row(description: str, quantity: float, unit_price: float, total_price: float):
+        """Add an item row from OCR import with editable text description (no product dropdown)."""
+        item_data = {
+            'product_id': None,
+            'ocr_description': description,
+            'quantity': quantity or 1,
+            'unitprice': unit_price or 0,
+            'itemprice': total_price or 0,
+            'is_imported': True,
+        }
+
+        with ui.row().classes('w-full items-end gap-2 p-2 bg-indigo-50 dark:bg-indigo-900 rounded') as row:
+            desc_input = ui.input(
+                label='Description (new product)',
+                value=description,
+                on_change=lambda e: item_data.update(ocr_description=e.value),
+            ).classes('flex-1 min-w-[200px]')
+
+            quantity_input = ui.number(
+                label='Qty',
+                value=quantity or 1,
+                min=0.01,
+                on_change=lambda e: _calc_item_price(e.value, item_data, itemprice_input)
+            ).classes('w-20')
+
+            unitprice_input = ui.number(
+                label='Unit Price',
+                value=unit_price or 0,
+                on_change=lambda e: _on_unitprice_change(e.value, item_data, quantity_input.value, itemprice_input)
+            ).classes('w-28')
+
+            itemprice_input = ui.number(
+                label='Item Total',
+                value=total_price or 0,
+            ).classes('w-28').props('readonly')
+
+            ui.button(icon='delete', on_click=lambda r=row: _remove_item_row(r)).props('flat color=negative')
+
+            item_data['row'] = row
+            item_data['desc_input'] = desc_input
+            item_data['quantity_input'] = quantity_input
+            item_data['unitprice_input'] = unitprice_input
+            item_data['itemprice_input'] = itemprice_input
+            form_items.append(item_data)
+
+    def _generate_product_code(db, supplier_name: str, description: str) -> str:
+        """Generate a unique product code: first 2 letters of supplier + timestamp."""
+        prefix = re.sub(r'[^A-Z]', '', supplier_name.upper())[:2] or 'XX'
+        ts = datetime.now().strftime('%Y%m%d%H%M%S')
+        code = f'{prefix}-{ts}'
+        # Ensure uniqueness (in case two items are created in the same second)
+        suffix = 1
+        base_code = code
+        while db.query(SupplierProduct).filter(SupplierProduct.code == code).first():
+            code = f'{base_code}{suffix}'
+            suffix += 1
+        return code
+
     def _add_item_row_edit(item, supplier_id):
         """Add an existing item row in edit dialog."""
         products = products_by_supplier.get(supplier_id, {})
@@ -303,18 +366,74 @@ def factures_page():
                 db.add(facture)
                 db.flush()
 
+                # Get supplier name for product code generation
+                supplier_id = create_supplier_select.value
+                supplier_name = supplier_options.get(supplier_id, 'UNKNOWN')
+
                 # Create items
                 for item in form_items:
-                    if item.get('product_id'):
+                    product_id = item.get('product_id')
+
+                    # Imported item without product: find existing or create
+                    if not product_id and item.get('is_imported'):
+                        desc = item.get('ocr_description', '').strip()
+                        if not desc:
+                            continue
+                        desc_lower = desc.lower()
+
+                        # Check for existing product with same supplier and similar designation
+                        existing = db.query(SupplierProduct).filter(
+                            SupplierProduct.idsupplier == supplier_id,
+                            SupplierProduct.designation.ilike(f'%{desc_lower}%'),
+                        ).first()
+
+                        # Also try: existing designation contains the OCR desc, or vice versa
+                        if not existing:
+                            candidates = db.query(SupplierProduct).filter(
+                                SupplierProduct.idsupplier == supplier_id,
+                            ).all()
+                            for c in candidates:
+                                c_desg = (c.designation or '').lower()
+                                if c_desg and (c_desg in desc_lower or desc_lower in c_desg):
+                                    existing = c
+                                    break
+
+                        if existing:
+                            product_id = existing.idsupplierproduct
+                            logger.info(
+                                f"Reusing existing product '{existing.code}' "
+                                f"for '{desc}' (supplier {supplier_id})"
+                            )
+                        else:
+                            code = _generate_product_code(db, supplier_name, desc)
+                            product = SupplierProduct(
+                                code=code,
+                                designation=desc[:500],
+                                unitprice=item.get('unitprice', 0),
+                                idsupplier=supplier_id,
+                            )
+                            db.add(product)
+                            db.flush()
+                            product_id = product.idsupplierproduct
+                            logger.info(
+                                f"Auto-created product '{code}' ({desc}) for supplier {supplier_id}"
+                            )
+
+                    if product_id:
                         fact_item = SupplierFactItem(
-                            idsupplier=create_supplier_select.value,
+                            idsupplier=supplier_id,
                             idsupplierfacture=facture.idFacture,
-                            idsupplierproduct=item['product_id'],
+                            idsupplierproduct=product_id,
                             quantity=item.get('quantity', 1),
                             itemPrice=item.get('itemprice', 0),
                             unitPriceSnap=item.get('unitprice', 0)
                         )
                         db.add(fact_item)
+
+            # Mark scanned receipt as imported only after successful save
+            if form_data.get('imported_receipt_id'):
+                ScanSessionStore.mark_imported(form_data['imported_receipt_id'])
+                form_data['imported_receipt_id'] = None
 
             ui.notify('Facture created successfully', type='positive')
             create_dialog.close()
@@ -386,6 +505,145 @@ def factures_page():
         edit_tva_input.value = round(total_tva, 2)
         edit_ttc_input.value = round(total_ttc, 2)
 
+    # ==================== IMPORT FROM IMAGE ====================
+
+    import_dialog_ref = {'dialog': None}
+
+    def on_import_from_image():
+        """Show available scanned receipts for import into create form."""
+        available = ScanSessionStore.get_available_receipts()
+        if not available:
+            ui.notify('No scanned receipts available. Scan receipts from the Outbound page first.', type='warning')
+            return
+
+        # Build and open selection dialog
+        if import_dialog_ref['dialog']:
+            import_dialog_ref['dialog'].delete()
+
+        with ui.dialog() as dlg, ui.card().classes('p-4 min-w-[500px] max-h-[70vh]'):
+            import_dialog_ref['dialog'] = dlg
+            ui.label('Import from Scanned Receipt').classes('text-lg font-semibold mb-2')
+            ui.label('Select a receipt to fill the facture form.').classes(
+                'text-sm text-gray-500 mb-4'
+            )
+
+            for rid, r in available.items():
+                ocr = r.get('ocr_result') or {}
+                supplier_name = ocr.get('supplier_name', 'Unknown')
+                amount_ttc = ocr.get('amount_ttc')
+                facture_num = ocr.get('facture_num', '')
+                facture_date = ocr.get('facture_date', '')
+                archived = r.get('archived_filename', '')
+
+                with ui.card().classes('w-full p-3 cursor-pointer hover:bg-blue-50').on(
+                    'click', lambda _rid=rid, _dlg=dlg: _apply_import(_rid, _dlg)
+                ):
+                    with ui.row().classes('w-full items-center gap-2'):
+                        ui.icon('receipt', color='indigo').classes('text-xl')
+                        ui.label(supplier_name).classes('font-semibold')
+                        if amount_ttc is not None:
+                            ui.badge(f'{amount_ttc:,.2f}', color='blue').classes('text-sm')
+                    with ui.row().classes('gap-4 mt-1'):
+                        if facture_num:
+                            ui.label(f'#{facture_num}').classes('text-xs text-gray-500')
+                        if facture_date:
+                            ui.label(facture_date).classes('text-xs text-gray-500')
+                        if archived:
+                            ui.label(archived).classes('text-xs text-gray-400 truncate')
+
+            with ui.row().classes('w-full justify-end mt-4'):
+                ui.button('Cancel', on_click=dlg.close).props('flat')
+
+        dlg.open()
+
+    def _apply_import(receipt_id: str, dlg):
+        """Fill the create form from a scanned receipt's OCR data."""
+        all_receipts = ScanSessionStore.get_all_receipts()
+        receipt = all_receipts.get(receipt_id)
+        if not receipt:
+            ui.notify('Receipt not found', type='warning')
+            return
+
+        ocr = receipt.get('ocr_result') or {}
+        dlg.close()
+
+        # If no OCR data (e.g. imported receipt), run OCR on-demand
+        if not ocr.get('supplier_name'):
+            archived = receipt.get('archived_filename')
+            if archived:
+                ui.notify('Running OCR on imported image...', type='info')
+                try:
+                    ocr_result = OutboundMatchService.ocr_archived_image(archived)
+                    if ocr_result.get('success'):
+                        ocr = ocr_result
+                        ScanSessionStore.update_ocr(receipt_id, ocr_result)
+                        ui.notify('OCR completed successfully', type='positive')
+                    else:
+                        ui.notify(
+                            f'OCR failed: {ocr_result.get("error", "Unknown error")}',
+                            type='negative',
+                        )
+                except Exception as e:
+                    logger.error(f"On-demand OCR failed for {archived}: {e}")
+                    ui.notify(f'OCR error: {e}', type='negative')
+
+        # Match supplier by name
+        supplier_name = ocr.get('supplier_name', '')
+        matched_supplier_id = None
+        if supplier_name:
+            name_lower = supplier_name.lower().strip()
+            for sid, sname in supplier_options.items():
+                if sname.lower().strip() == name_lower:
+                    matched_supplier_id = sid
+                    break
+            if not matched_supplier_id:
+                for sid, sname in supplier_options.items():
+                    if name_lower in sname.lower() or sname.lower() in name_lower:
+                        matched_supplier_id = sid
+                        break
+
+        # Fill form fields
+        if matched_supplier_id:
+            create_supplier_select.value = matched_supplier_id
+            on_create_supplier_change(matched_supplier_id)
+        else:
+            ui.notify(
+                f'Supplier "{supplier_name}" not found. Please select manually.',
+                type='info', timeout=5000,
+            )
+
+        create_factnum_input.value = ocr.get('facture_num', '') or ''
+        create_factdate_input.value = ocr.get('facture_date', '') or ''
+        create_filename_input.value = receipt.get('archived_filename', '') or ''
+
+        # Fill totals
+        create_ht_input.value = ocr.get('amount_ht', 0) or 0
+        create_tva_input.value = ocr.get('amount_tva', 0) or 0
+        create_ttc_input.value = ocr.get('amount_ttc', 0) or 0
+
+        # Populate line items from OCR
+        create_items_container.clear()
+        form_items.clear()
+        line_items = ocr.get('line_items') or []
+        with create_items_container:
+            for li in line_items:
+                _add_imported_item_row(
+                    description=li.get('description', ''),
+                    quantity=li.get('quantity', 1),
+                    unit_price=li.get('unit_price', 0),
+                    total_price=li.get('total_price', 0),
+                )
+
+        # Track which receipt is being imported — mark_imported on successful save only
+        form_data['imported_receipt_id'] = receipt_id
+
+        ui.notify(
+            f'Imported receipt from {supplier_name or "scan"}. '
+            f'{len(line_items)} line item(s) added. Review and save.',
+            type='positive',
+        )
+        logger.info(f"Imported scanned receipt {receipt_id} into create facture form")
+
     # Load suppliers for dropdowns
     suppliers = SupplierService.get_all()
     supplier_options = {s['idsupplier']: s['name'] for s in suppliers}
@@ -398,7 +656,12 @@ def factures_page():
     # Create dialog
     with ui.dialog() as create_dialog:
         with ui.card().classes('w-[800px] max-h-[90vh] overflow-auto p-4'):
-            ui.label('Create Facture').classes('text-xl font-bold mb-4')
+            with ui.row().classes('w-full items-center justify-between mb-4'):
+                ui.label('Create Facture').classes('text-xl font-bold')
+                ui.button(
+                    'Import from Image', icon='document_scanner',
+                    on_click=on_import_from_image,
+                ).props('flat color=indigo dense')
 
             with ui.row().classes('w-full gap-4'):
                 create_supplier_select = ui.select(

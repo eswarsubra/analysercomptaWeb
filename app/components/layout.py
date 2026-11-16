@@ -26,7 +26,7 @@ def header():
             ])
 
             # Transactions dropdown menu
-            _nav_dropdown('Transactions', 'account_balance', [
+            _nav_dropdown('Bank', 'account_balance', [
                 ('View Transactions', 'list_alt', '/transactions'),
                 ('Explore Transactions', 'explore', '/transactions/explore'),
             ])
@@ -37,8 +37,9 @@ def header():
             ])
 
             # Analytics dropdown menu
-            _nav_dropdown('Analytics', 'analytics', [
-                ('Reconciliation', 'compare_arrows', '/analytics/reconciliation'),
+            _nav_dropdown('Reconcilliation', 'analytics', [
+                ('Sales - Bank', 'compare_arrows', '/analytics/reconciliation'),
+                ('Justify Outbound', 'receipt_long', '/analytics/outbound'),
             ])
 
         # Theme toggle

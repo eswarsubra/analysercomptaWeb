@@ -1798,3 +1798,1301 @@ ConnectionResetError: [WinError 10054] Une connexion existante a dû être ferm�
 2026-03-03 20:30:37 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
 2026-03-03 20:30:42 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
 2026-03-03 20:30:42 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 01:43:09 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-04 01:43:13 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-04 01:43:18 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 01:43:18 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 01:43:33 - nicegui - ERROR - (pymysql.err.ProgrammingError) (1146, "Table 'dev_bankimport_brut.outbound_match' doesn't exist")
+[SQL: SELECT outbound_match.id AS outbound_match_id, outbound_match.`TransactionID` AS `outbound_match_TransactionID`, outbound_match.idsupplierfacture AS outbound_match_idsupplierfacture, outbound_match.idsupplier AS outbound_match_idsupplier, outbound_match.match_type AS outbound_match_match_type, outbound_match.match_status AS outbound_match_match_status, outbound_match.confidence_score AS outbound_match_confidence_score, outbound_match.llm_supplier_suggestion AS outbound_match_llm_supplier_suggestion, outbound_match.llm_reasoning AS outbound_match_llm_reasoning, outbound_match.matched_at AS outbound_match_matched_at, outbound_match.confirmed_at AS outbound_match_confirmed_at 
+FROM outbound_match 
+WHERE outbound_match.`TransactionID` IN (%(TransactionID_1_1)s, %(TransactionID_1_2)s, %(TransactionID_1_3)s, %(TransactionID_1_4)s, %(TransactionID_1_5)s, %(TransactionID_1_6)s, %(TransactionID_1_7)s, %(TransactionID_1_8)s, %(TransactionID_1_9)s, %(TransactionID_1_10)s, %(TransactionID_1_11)s, %(TransactionID_1_12)s, %(TransactionID_1_13)s, %(TransactionID_1_14)s, %(TransactionID_1_15)s, %(TransactionID_1_16)s, %(TransactionID_1_17)s, %(TransactionID_1_18)s, %(TransactionID_1_19)s, %(TransactionID_1_20)s, %(TransactionID_1_21)s, %(TransactionID_1_22)s, %(TransactionID_1_23)s, %(TransactionID_1_24)s, %(TransactionID_1_25)s, %(TransactionID_1_26)s, %(TransactionID_1_27)s, %(TransactionID_1_28)s, %(TransactionID_1_29)s, %(TransactionID_1_30)s, %(TransactionID_1_31)s, %(TransactionID_1_32)s, %(TransactionID_1_33)s, %(TransactionID_1_34)s, %(TransactionID_1_35)s, %(TransactionID_1_36)s, %(TransactionID_1_37)s, %(TransactionID_1_38)s, %(TransactionID_1_39)s, %(TransactionID_1_40)s, %(TransactionID_1_41)s, %(TransactionID_1_42)s, %(TransactionID_1_43)s, %(TransactionID_1_44)s, %(TransactionID_1_45)s, %(TransactionID_1_46)s, %(TransactionID_1_47)s, %(TransactionID_1_48)s, %(TransactionID_1_49)s, %(TransactionID_1_50)s, %(TransactionID_1_51)s, %(TransactionID_1_52)s, %(TransactionID_1_53)s, %(TransactionID_1_54)s, %(TransactionID_1_55)s, %(TransactionID_1_56)s, %(TransactionID_1_57)s, %(TransactionID_1_58)s, %(TransactionID_1_59)s, %(TransactionID_1_60)s, %(TransactionID_1_61)s, %(TransactionID_1_62)s, %(TransactionID_1_63)s, %(TransactionID_1_64)s, %(TransactionID_1_65)s, %(TransactionID_1_66)s, %(TransactionID_1_67)s, %(TransactionID_1_68)s, %(TransactionID_1_69)s, %(TransactionID_1_70)s, %(TransactionID_1_71)s, %(TransactionID_1_72)s, %(TransactionID_1_73)s, %(TransactionID_1_74)s)]
+[parameters: {'TransactionID_1_1': 725, 'TransactionID_1_2': 726, 'TransactionID_1_3': 727, 'TransactionID_1_4': 728, 'TransactionID_1_5': 729, 'TransactionID_1_6': 731, 'TransactionID_1_7': 732, 'TransactionID_1_8': 733, 'TransactionID_1_9': 734, 'TransactionID_1_10': 737, 'TransactionID_1_11': 742, 'TransactionID_1_12': 743, 'TransactionID_1_13': 744, 'TransactionID_1_14': 745, 'TransactionID_1_15': 746, 'TransactionID_1_16': 747, 'TransactionID_1_17': 749, 'TransactionID_1_18': 750, 'TransactionID_1_19': 751, 'TransactionID_1_20': 752, 'TransactionID_1_21': 755, 'TransactionID_1_22': 756, 'TransactionID_1_23': 758, 'TransactionID_1_24': 759, 'TransactionID_1_25': 760, 'TransactionID_1_26': 765, 'TransactionID_1_27': 766, 'TransactionID_1_28': 767, 'TransactionID_1_29': 770, 'TransactionID_1_30': 772, 'TransactionID_1_31': 778, 'TransactionID_1_32': 779, 'TransactionID_1_33': 781, 'TransactionID_1_34': 782, 'TransactionID_1_35': 784, 'TransactionID_1_36': 787, 'TransactionID_1_37': 788, 'TransactionID_1_38': 790, 'TransactionID_1_39': 791, 'TransactionID_1_40': 792, 'TransactionID_1_41': 793, 'TransactionID_1_42': 794, 'TransactionID_1_43': 795, 'TransactionID_1_44': 798, 'TransactionID_1_45': 801, 'TransactionID_1_46': 802, 'TransactionID_1_47': 803, 'TransactionID_1_48': 804, 'TransactionID_1_49': 805, 'TransactionID_1_50': 807, 'TransactionID_1_51': 811, 'TransactionID_1_52': 816, 'TransactionID_1_53': 817, 'TransactionID_1_54': 820, 'TransactionID_1_55': 822, 'TransactionID_1_56': 823, 'TransactionID_1_57': 825, 'TransactionID_1_58': 826, 'TransactionID_1_59': 827, 'TransactionID_1_60': 833, 'TransactionID_1_61': 834, 'TransactionID_1_62': 836, 'TransactionID_1_63': 839, 'TransactionID_1_64': 840, 'TransactionID_1_65': 842, 'TransactionID_1_66': 851, 'TransactionID_1_67': 853, 'TransactionID_1_68': 855, 'TransactionID_1_69': 856, 'TransactionID_1_70': 858, 'TransactionID_1_71': 860, 'TransactionID_1_72': 861, 'TransactionID_1_73': 865, 'TransactionID_1_74': 866}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'dev_bankimport_brut.outbound_match' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\outbound.py", line 72, in load_data
+    state['transactions'] = OutboundMatchService.get_transactions_for_month(month, year)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\outbound_match_service.py", line 38, in get_transactions_for_month
+    return CoreOutboundMatchService.get_outbound_transactions_for_month(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\outbound_match_service.py", line 61, in get_outbound_transactions_for_month
+    ).all()
+      ^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.ProgrammingError: (pymysql.err.ProgrammingError) (1146, "Table 'dev_bankimport_brut.outbound_match' doesn't exist")
+[SQL: SELECT outbound_match.id AS outbound_match_id, outbound_match.`TransactionID` AS `outbound_match_TransactionID`, outbound_match.idsupplierfacture AS outbound_match_idsupplierfacture, outbound_match.idsupplier AS outbound_match_idsupplier, outbound_match.match_type AS outbound_match_match_type, outbound_match.match_status AS outbound_match_match_status, outbound_match.confidence_score AS outbound_match_confidence_score, outbound_match.llm_supplier_suggestion AS outbound_match_llm_supplier_suggestion, outbound_match.llm_reasoning AS outbound_match_llm_reasoning, outbound_match.matched_at AS outbound_match_matched_at, outbound_match.confirmed_at AS outbound_match_confirmed_at 
+FROM outbound_match 
+WHERE outbound_match.`TransactionID` IN (%(TransactionID_1_1)s, %(TransactionID_1_2)s, %(TransactionID_1_3)s, %(TransactionID_1_4)s, %(TransactionID_1_5)s, %(TransactionID_1_6)s, %(TransactionID_1_7)s, %(TransactionID_1_8)s, %(TransactionID_1_9)s, %(TransactionID_1_10)s, %(TransactionID_1_11)s, %(TransactionID_1_12)s, %(TransactionID_1_13)s, %(TransactionID_1_14)s, %(TransactionID_1_15)s, %(TransactionID_1_16)s, %(TransactionID_1_17)s, %(TransactionID_1_18)s, %(TransactionID_1_19)s, %(TransactionID_1_20)s, %(TransactionID_1_21)s, %(TransactionID_1_22)s, %(TransactionID_1_23)s, %(TransactionID_1_24)s, %(TransactionID_1_25)s, %(TransactionID_1_26)s, %(TransactionID_1_27)s, %(TransactionID_1_28)s, %(TransactionID_1_29)s, %(TransactionID_1_30)s, %(TransactionID_1_31)s, %(TransactionID_1_32)s, %(TransactionID_1_33)s, %(TransactionID_1_34)s, %(TransactionID_1_35)s, %(TransactionID_1_36)s, %(TransactionID_1_37)s, %(TransactionID_1_38)s, %(TransactionID_1_39)s, %(TransactionID_1_40)s, %(TransactionID_1_41)s, %(TransactionID_1_42)s, %(TransactionID_1_43)s, %(TransactionID_1_44)s, %(TransactionID_1_45)s, %(TransactionID_1_46)s, %(TransactionID_1_47)s, %(TransactionID_1_48)s, %(TransactionID_1_49)s, %(TransactionID_1_50)s, %(TransactionID_1_51)s, %(TransactionID_1_52)s, %(TransactionID_1_53)s, %(TransactionID_1_54)s, %(TransactionID_1_55)s, %(TransactionID_1_56)s, %(TransactionID_1_57)s, %(TransactionID_1_58)s, %(TransactionID_1_59)s, %(TransactionID_1_60)s, %(TransactionID_1_61)s, %(TransactionID_1_62)s, %(TransactionID_1_63)s, %(TransactionID_1_64)s, %(TransactionID_1_65)s, %(TransactionID_1_66)s, %(TransactionID_1_67)s, %(TransactionID_1_68)s, %(TransactionID_1_69)s, %(TransactionID_1_70)s, %(TransactionID_1_71)s, %(TransactionID_1_72)s, %(TransactionID_1_73)s, %(TransactionID_1_74)s)]
+[parameters: {'TransactionID_1_1': 725, 'TransactionID_1_2': 726, 'TransactionID_1_3': 727, 'TransactionID_1_4': 728, 'TransactionID_1_5': 729, 'TransactionID_1_6': 731, 'TransactionID_1_7': 732, 'TransactionID_1_8': 733, 'TransactionID_1_9': 734, 'TransactionID_1_10': 737, 'TransactionID_1_11': 742, 'TransactionID_1_12': 743, 'TransactionID_1_13': 744, 'TransactionID_1_14': 745, 'TransactionID_1_15': 746, 'TransactionID_1_16': 747, 'TransactionID_1_17': 749, 'TransactionID_1_18': 750, 'TransactionID_1_19': 751, 'TransactionID_1_20': 752, 'TransactionID_1_21': 755, 'TransactionID_1_22': 756, 'TransactionID_1_23': 758, 'TransactionID_1_24': 759, 'TransactionID_1_25': 760, 'TransactionID_1_26': 765, 'TransactionID_1_27': 766, 'TransactionID_1_28': 767, 'TransactionID_1_29': 770, 'TransactionID_1_30': 772, 'TransactionID_1_31': 778, 'TransactionID_1_32': 779, 'TransactionID_1_33': 781, 'TransactionID_1_34': 782, 'TransactionID_1_35': 784, 'TransactionID_1_36': 787, 'TransactionID_1_37': 788, 'TransactionID_1_38': 790, 'TransactionID_1_39': 791, 'TransactionID_1_40': 792, 'TransactionID_1_41': 793, 'TransactionID_1_42': 794, 'TransactionID_1_43': 795, 'TransactionID_1_44': 798, 'TransactionID_1_45': 801, 'TransactionID_1_46': 802, 'TransactionID_1_47': 803, 'TransactionID_1_48': 804, 'TransactionID_1_49': 805, 'TransactionID_1_50': 807, 'TransactionID_1_51': 811, 'TransactionID_1_52': 816, 'TransactionID_1_53': 817, 'TransactionID_1_54': 820, 'TransactionID_1_55': 822, 'TransactionID_1_56': 823, 'TransactionID_1_57': 825, 'TransactionID_1_58': 826, 'TransactionID_1_59': 827, 'TransactionID_1_60': 833, 'TransactionID_1_61': 834, 'TransactionID_1_62': 836, 'TransactionID_1_63': 839, 'TransactionID_1_64': 840, 'TransactionID_1_65': 842, 'TransactionID_1_66': 851, 'TransactionID_1_67': 853, 'TransactionID_1_68': 855, 'TransactionID_1_69': 856, 'TransactionID_1_70': 858, 'TransactionID_1_71': 860, 'TransactionID_1_72': 861, 'TransactionID_1_73': 865, 'TransactionID_1_74': 866}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-04 01:44:16 - nicegui - ERROR - (pymysql.err.ProgrammingError) (1146, "Table 'dev_bankimport_brut.outbound_match' doesn't exist")
+[SQL: SELECT outbound_match.id AS outbound_match_id, outbound_match.`TransactionID` AS `outbound_match_TransactionID`, outbound_match.idsupplierfacture AS outbound_match_idsupplierfacture, outbound_match.idsupplier AS outbound_match_idsupplier, outbound_match.match_type AS outbound_match_match_type, outbound_match.match_status AS outbound_match_match_status, outbound_match.confidence_score AS outbound_match_confidence_score, outbound_match.llm_supplier_suggestion AS outbound_match_llm_supplier_suggestion, outbound_match.llm_reasoning AS outbound_match_llm_reasoning, outbound_match.matched_at AS outbound_match_matched_at, outbound_match.confirmed_at AS outbound_match_confirmed_at 
+FROM outbound_match 
+WHERE outbound_match.`TransactionID` IN (%(TransactionID_1_1)s, %(TransactionID_1_2)s, %(TransactionID_1_3)s, %(TransactionID_1_4)s, %(TransactionID_1_5)s, %(TransactionID_1_6)s, %(TransactionID_1_7)s, %(TransactionID_1_8)s, %(TransactionID_1_9)s, %(TransactionID_1_10)s, %(TransactionID_1_11)s, %(TransactionID_1_12)s, %(TransactionID_1_13)s, %(TransactionID_1_14)s, %(TransactionID_1_15)s, %(TransactionID_1_16)s, %(TransactionID_1_17)s, %(TransactionID_1_18)s, %(TransactionID_1_19)s, %(TransactionID_1_20)s, %(TransactionID_1_21)s, %(TransactionID_1_22)s, %(TransactionID_1_23)s, %(TransactionID_1_24)s, %(TransactionID_1_25)s, %(TransactionID_1_26)s, %(TransactionID_1_27)s, %(TransactionID_1_28)s, %(TransactionID_1_29)s, %(TransactionID_1_30)s, %(TransactionID_1_31)s, %(TransactionID_1_32)s, %(TransactionID_1_33)s, %(TransactionID_1_34)s, %(TransactionID_1_35)s, %(TransactionID_1_36)s, %(TransactionID_1_37)s, %(TransactionID_1_38)s, %(TransactionID_1_39)s, %(TransactionID_1_40)s, %(TransactionID_1_41)s, %(TransactionID_1_42)s, %(TransactionID_1_43)s, %(TransactionID_1_44)s, %(TransactionID_1_45)s, %(TransactionID_1_46)s, %(TransactionID_1_47)s, %(TransactionID_1_48)s, %(TransactionID_1_49)s, %(TransactionID_1_50)s, %(TransactionID_1_51)s, %(TransactionID_1_52)s, %(TransactionID_1_53)s, %(TransactionID_1_54)s, %(TransactionID_1_55)s, %(TransactionID_1_56)s, %(TransactionID_1_57)s, %(TransactionID_1_58)s, %(TransactionID_1_59)s, %(TransactionID_1_60)s, %(TransactionID_1_61)s, %(TransactionID_1_62)s, %(TransactionID_1_63)s, %(TransactionID_1_64)s, %(TransactionID_1_65)s, %(TransactionID_1_66)s, %(TransactionID_1_67)s, %(TransactionID_1_68)s, %(TransactionID_1_69)s, %(TransactionID_1_70)s, %(TransactionID_1_71)s, %(TransactionID_1_72)s, %(TransactionID_1_73)s, %(TransactionID_1_74)s)]
+[parameters: {'TransactionID_1_1': 725, 'TransactionID_1_2': 726, 'TransactionID_1_3': 727, 'TransactionID_1_4': 728, 'TransactionID_1_5': 729, 'TransactionID_1_6': 731, 'TransactionID_1_7': 732, 'TransactionID_1_8': 733, 'TransactionID_1_9': 734, 'TransactionID_1_10': 737, 'TransactionID_1_11': 742, 'TransactionID_1_12': 743, 'TransactionID_1_13': 744, 'TransactionID_1_14': 745, 'TransactionID_1_15': 746, 'TransactionID_1_16': 747, 'TransactionID_1_17': 749, 'TransactionID_1_18': 750, 'TransactionID_1_19': 751, 'TransactionID_1_20': 752, 'TransactionID_1_21': 755, 'TransactionID_1_22': 756, 'TransactionID_1_23': 758, 'TransactionID_1_24': 759, 'TransactionID_1_25': 760, 'TransactionID_1_26': 765, 'TransactionID_1_27': 766, 'TransactionID_1_28': 767, 'TransactionID_1_29': 770, 'TransactionID_1_30': 772, 'TransactionID_1_31': 778, 'TransactionID_1_32': 779, 'TransactionID_1_33': 781, 'TransactionID_1_34': 782, 'TransactionID_1_35': 784, 'TransactionID_1_36': 787, 'TransactionID_1_37': 788, 'TransactionID_1_38': 790, 'TransactionID_1_39': 791, 'TransactionID_1_40': 792, 'TransactionID_1_41': 793, 'TransactionID_1_42': 794, 'TransactionID_1_43': 795, 'TransactionID_1_44': 798, 'TransactionID_1_45': 801, 'TransactionID_1_46': 802, 'TransactionID_1_47': 803, 'TransactionID_1_48': 804, 'TransactionID_1_49': 805, 'TransactionID_1_50': 807, 'TransactionID_1_51': 811, 'TransactionID_1_52': 816, 'TransactionID_1_53': 817, 'TransactionID_1_54': 820, 'TransactionID_1_55': 822, 'TransactionID_1_56': 823, 'TransactionID_1_57': 825, 'TransactionID_1_58': 826, 'TransactionID_1_59': 827, 'TransactionID_1_60': 833, 'TransactionID_1_61': 834, 'TransactionID_1_62': 836, 'TransactionID_1_63': 839, 'TransactionID_1_64': 840, 'TransactionID_1_65': 842, 'TransactionID_1_66': 851, 'TransactionID_1_67': 853, 'TransactionID_1_68': 855, 'TransactionID_1_69': 856, 'TransactionID_1_70': 858, 'TransactionID_1_71': 860, 'TransactionID_1_72': 861, 'TransactionID_1_73': 865, 'TransactionID_1_74': 866}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'dev_bankimport_brut.outbound_match' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\outbound.py", line 72, in load_data
+    state['transactions'] = OutboundMatchService.get_transactions_for_month(month, year)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\outbound_match_service.py", line 38, in get_transactions_for_month
+    return CoreOutboundMatchService.get_outbound_transactions_for_month(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\outbound_match_service.py", line 61, in get_outbound_transactions_for_month
+    ).all()
+      ^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 575, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 826, in _read_query_result
+    result.read()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 1203, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 782, in _read_packet
+    packet.raise_for_error()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.ProgrammingError: (pymysql.err.ProgrammingError) (1146, "Table 'dev_bankimport_brut.outbound_match' doesn't exist")
+[SQL: SELECT outbound_match.id AS outbound_match_id, outbound_match.`TransactionID` AS `outbound_match_TransactionID`, outbound_match.idsupplierfacture AS outbound_match_idsupplierfacture, outbound_match.idsupplier AS outbound_match_idsupplier, outbound_match.match_type AS outbound_match_match_type, outbound_match.match_status AS outbound_match_match_status, outbound_match.confidence_score AS outbound_match_confidence_score, outbound_match.llm_supplier_suggestion AS outbound_match_llm_supplier_suggestion, outbound_match.llm_reasoning AS outbound_match_llm_reasoning, outbound_match.matched_at AS outbound_match_matched_at, outbound_match.confirmed_at AS outbound_match_confirmed_at 
+FROM outbound_match 
+WHERE outbound_match.`TransactionID` IN (%(TransactionID_1_1)s, %(TransactionID_1_2)s, %(TransactionID_1_3)s, %(TransactionID_1_4)s, %(TransactionID_1_5)s, %(TransactionID_1_6)s, %(TransactionID_1_7)s, %(TransactionID_1_8)s, %(TransactionID_1_9)s, %(TransactionID_1_10)s, %(TransactionID_1_11)s, %(TransactionID_1_12)s, %(TransactionID_1_13)s, %(TransactionID_1_14)s, %(TransactionID_1_15)s, %(TransactionID_1_16)s, %(TransactionID_1_17)s, %(TransactionID_1_18)s, %(TransactionID_1_19)s, %(TransactionID_1_20)s, %(TransactionID_1_21)s, %(TransactionID_1_22)s, %(TransactionID_1_23)s, %(TransactionID_1_24)s, %(TransactionID_1_25)s, %(TransactionID_1_26)s, %(TransactionID_1_27)s, %(TransactionID_1_28)s, %(TransactionID_1_29)s, %(TransactionID_1_30)s, %(TransactionID_1_31)s, %(TransactionID_1_32)s, %(TransactionID_1_33)s, %(TransactionID_1_34)s, %(TransactionID_1_35)s, %(TransactionID_1_36)s, %(TransactionID_1_37)s, %(TransactionID_1_38)s, %(TransactionID_1_39)s, %(TransactionID_1_40)s, %(TransactionID_1_41)s, %(TransactionID_1_42)s, %(TransactionID_1_43)s, %(TransactionID_1_44)s, %(TransactionID_1_45)s, %(TransactionID_1_46)s, %(TransactionID_1_47)s, %(TransactionID_1_48)s, %(TransactionID_1_49)s, %(TransactionID_1_50)s, %(TransactionID_1_51)s, %(TransactionID_1_52)s, %(TransactionID_1_53)s, %(TransactionID_1_54)s, %(TransactionID_1_55)s, %(TransactionID_1_56)s, %(TransactionID_1_57)s, %(TransactionID_1_58)s, %(TransactionID_1_59)s, %(TransactionID_1_60)s, %(TransactionID_1_61)s, %(TransactionID_1_62)s, %(TransactionID_1_63)s, %(TransactionID_1_64)s, %(TransactionID_1_65)s, %(TransactionID_1_66)s, %(TransactionID_1_67)s, %(TransactionID_1_68)s, %(TransactionID_1_69)s, %(TransactionID_1_70)s, %(TransactionID_1_71)s, %(TransactionID_1_72)s, %(TransactionID_1_73)s, %(TransactionID_1_74)s)]
+[parameters: {'TransactionID_1_1': 725, 'TransactionID_1_2': 726, 'TransactionID_1_3': 727, 'TransactionID_1_4': 728, 'TransactionID_1_5': 729, 'TransactionID_1_6': 731, 'TransactionID_1_7': 732, 'TransactionID_1_8': 733, 'TransactionID_1_9': 734, 'TransactionID_1_10': 737, 'TransactionID_1_11': 742, 'TransactionID_1_12': 743, 'TransactionID_1_13': 744, 'TransactionID_1_14': 745, 'TransactionID_1_15': 746, 'TransactionID_1_16': 747, 'TransactionID_1_17': 749, 'TransactionID_1_18': 750, 'TransactionID_1_19': 751, 'TransactionID_1_20': 752, 'TransactionID_1_21': 755, 'TransactionID_1_22': 756, 'TransactionID_1_23': 758, 'TransactionID_1_24': 759, 'TransactionID_1_25': 760, 'TransactionID_1_26': 765, 'TransactionID_1_27': 766, 'TransactionID_1_28': 767, 'TransactionID_1_29': 770, 'TransactionID_1_30': 772, 'TransactionID_1_31': 778, 'TransactionID_1_32': 779, 'TransactionID_1_33': 781, 'TransactionID_1_34': 782, 'TransactionID_1_35': 784, 'TransactionID_1_36': 787, 'TransactionID_1_37': 788, 'TransactionID_1_38': 790, 'TransactionID_1_39': 791, 'TransactionID_1_40': 792, 'TransactionID_1_41': 793, 'TransactionID_1_42': 794, 'TransactionID_1_43': 795, 'TransactionID_1_44': 798, 'TransactionID_1_45': 801, 'TransactionID_1_46': 802, 'TransactionID_1_47': 803, 'TransactionID_1_48': 804, 'TransactionID_1_49': 805, 'TransactionID_1_50': 807, 'TransactionID_1_51': 811, 'TransactionID_1_52': 816, 'TransactionID_1_53': 817, 'TransactionID_1_54': 820, 'TransactionID_1_55': 822, 'TransactionID_1_56': 823, 'TransactionID_1_57': 825, 'TransactionID_1_58': 826, 'TransactionID_1_59': 827, 'TransactionID_1_60': 833, 'TransactionID_1_61': 834, 'TransactionID_1_62': 836, 'TransactionID_1_63': 839, 'TransactionID_1_64': 840, 'TransactionID_1_65': 842, 'TransactionID_1_66': 851, 'TransactionID_1_67': 853, 'TransactionID_1_68': 855, 'TransactionID_1_69': 856, 'TransactionID_1_70': 858, 'TransactionID_1_71': 860, 'TransactionID_1_72': 861, 'TransactionID_1_73': 865, 'TransactionID_1_74': 866}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-03-04 01:46:54 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-04 01:46:55 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-04 01:47:00 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 01:47:00 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 01:47:47 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-04 01:47:48 - app.services.llm_service - ERROR - Bedrock error: An error occurred (ValidationException) when calling the InvokeModel operation: The provided model identifier is invalid.
+2026-03-04 01:47:48 - app.services.outbound_match_service - ERROR - LLM call failed: AWS Bedrock error: An error occurred (ValidationException) when calling the InvokeModel operation: The provided model identifier is invalid.
+2026-03-04 01:50:17 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=721, type=MANUAL, status=CONFIRMED, supplier=8, facture=59
+2026-03-04 01:50:24 - analysercomptacore.services.outbound_match_service - INFO - Deleted outbound match: id=1, tx=721
+2026-03-04 01:51:29 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=721, type=MANUAL, status=CONFIRMED, supplier=8, facture=59
+2026-03-04 12:50:21 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-04 12:50:23 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-04 12:50:28 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 12:50:28 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 12:51:26 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=733, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-04 12:56:48 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-04 12:56:49 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-04 12:56:50 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-04 12:56:55 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 12:56:55 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 13:01:47 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=749, type=FILE, status=CONFIRMED, supplier=None, facture=None
+2026-03-04 13:02:23 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=760, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-04 13:03:11 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=772, type=MANUAL, status=CONFIRMED, supplier=8, facture=34
+2026-03-04 13:07:53 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-04 13:07:55 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-04 13:07:56 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-04 13:08:01 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-04 13:08:01 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 19:15:40 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-18 19:15:41 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-18 19:15:43 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-18 19:15:47 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 19:15:47 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:19:51 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-18 23:19:52 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-18 23:19:54 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-18 23:19:54 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-18 23:19:59 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:19:59 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:20:15 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:20:15 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:21:07 - app.services.mobile_scan_service - INFO - Mobile scan session created: 30e884cb...
+2026-03-18 23:21:07 - nicegui - ERROR - No module named 'qrcode'
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\mobile_scan_match.py", line 101, in on_start_scan
+    qr_data_uri = _generate_qr_base64(scan_url)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\mobile_scan_match.py", line 33, in _generate_qr_base64
+    import qrcode
+ModuleNotFoundError: No module named 'qrcode'
+2026-03-18 23:27:51 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-18 23:27:52 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-18 23:27:53 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-18 23:27:53 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-18 23:27:58 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:27:58 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:28:27 - app.services.mobile_scan_service - INFO - Mobile scan session created: 50d6bb6f...
+2026-03-18 23:29:10 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260318_232910.jpg
+2026-03-18 23:29:11 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-18 23:29:13 - app.services.outbound_match_service - WARNING - Invoice extraction unsuccessful: Validation error: The provided model identifier is invalid.
+2026-03-18 23:29:25 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260318_232925.jpg
+2026-03-18 23:29:25 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-18 23:29:27 - app.services.outbound_match_service - WARNING - Invoice extraction unsuccessful: Validation error: The provided model identifier is invalid.
+2026-03-18 23:37:10 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-18 23:37:11 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-18 23:37:12 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-18 23:37:12 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-18 23:37:17 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:37:17 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:57:27 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-18 23:57:28 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-18 23:57:29 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-18 23:57:29 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-18 23:57:34 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:57:34 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-18 23:57:52 - app.services.mobile_scan_service - INFO - Mobile scan session created: ca23e730...
+2026-03-18 23:57:59 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: ca23e730...
+2026-03-19 09:40:42 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 09:40:43 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 09:40:44 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 09:40:44 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 09:40:49 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 09:40:49 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 09:44:42 - app.services.mobile_scan_service - INFO - Mobile scan session created: 876cda04...
+2026-03-19 09:45:13 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_094513.jpg
+2026-03-19 09:45:14 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 09:45:16 - app.services.outbound_match_service - WARNING - Invoice extraction unsuccessful: Validation error: The provided model identifier is invalid.
+2026-03-19 10:02:45 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 10:02:46 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 10:02:47 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 10:02:47 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 10:02:52 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 10:02:52 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 10:03:03 - app.services.mobile_scan_service - INFO - Mobile scan session created: 938a15f1...
+2026-03-19 10:03:46 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_100346.jpg
+2026-03-19 10:03:47 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 10:03:50 - app.services.outbound_match_service - WARNING - Invoice extraction unsuccessful: Bedrock error (ResourceNotFoundException): Access denied. This Model is marked by provider as Legacy and you have not been actively using the model in the last 15 days. Please upgrade to an active model on Amazon Bedrock
+2026-03-19 10:12:13 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 10:12:15 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 10:12:16 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 10:12:16 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 10:12:21 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 10:12:21 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 10:12:30 - app.services.mobile_scan_service - INFO - Mobile scan session created: 50671cb2...
+2026-03-19 10:12:44 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_101244.jpg
+2026-03-19 10:12:45 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 10:12:47 - app.services.outbound_match_service - WARNING - Invoice extraction unsuccessful: Bedrock error (ResourceNotFoundException): Access denied. This Model is marked by provider as Legacy and you have not been actively using the model in the last 15 days. Please upgrade to an active model on Amazon Bedrock
+2026-03-19 10:13:13 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 50671cb2...
+2026-03-19 10:19:59 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 10:20:01 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 10:20:04 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 10:20:04 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 10:20:09 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 10:20:09 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 10:20:19 - app.services.mobile_scan_service - INFO - Mobile scan session created: 4a176027...
+2026-03-19 10:20:36 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_102036.jpg
+2026-03-19 10:20:37 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 10:20:39 - app.services.outbound_match_service - WARNING - Invoice extraction unsuccessful: Bedrock error (ResourceNotFoundException): Access denied. This Model is marked by provider as Legacy and you have not been actively using the model in the last 15 days. Please upgrade to an active model on Amazon Bedrock
+2026-03-19 10:27:29 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 10:27:31 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 10:27:33 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 10:27:33 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 10:27:39 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 10:27:39 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 10:27:47 - app.services.mobile_scan_service - INFO - Mobile scan session created: 7ac9d14d...
+2026-03-19 10:28:02 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_102802.jpg
+2026-03-19 10:28:02 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 10:28:17 - analysercomptacore.services.archive_service - INFO - Renamed archived image: UNKNOWN_20260319_102802.jpg -> STARBUCKS_20260319_102802.jpg
+2026-03-19 17:48:11 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 17:48:13 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 17:48:14 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 17:48:14 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 17:48:19 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 17:48:19 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 17:48:30 - app.services.mobile_scan_service - INFO - Mobile scan session created: 718fad8f...
+2026-03-19 17:48:50 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_174850.jpg
+2026-03-19 17:48:51 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 17:49:03 - analysercomptacore.services.archive_service - INFO - Renamed archived image: UNKNOWN_20260319_174850.jpg -> STARBUCKS_-_CONCESSIONS_GARE_FRANCE_SAS_20260319_174850.jpg
+2026-03-19 17:49:18 - app.pages.mobile_scan_match - INFO - Done scanning: 1 receipts, statuses: ['ready']
+2026-03-19 17:53:09 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 17:53:10 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 17:53:11 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 17:53:11 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 17:53:15 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 17:53:15 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 17:53:29 - app.services.mobile_scan_service - INFO - Mobile scan session created: 98b6cae5...
+2026-03-19 17:53:44 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_175344.jpg
+2026-03-19 17:53:44 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 17:53:57 - analysercomptacore.services.archive_service - INFO - Renamed archived image: UNKNOWN_20260319_175344.jpg -> STARBUCKS_-_CONCESSIONS_GARE_FRANCE_SAS_20260319_175344.jpg
+2026-03-19 17:54:07 - app.pages.mobile_scan_match - INFO - Done scanning: 1 receipts, statuses: ['ready']
+2026-03-19 17:54:07 - app.pages.mobile_scan_match - INFO - Opening matching panel with 1 pairings
+2026-03-19 18:49:47 - app.services.mobile_scan_service - INFO - Cleaned up 1 expired mobile scan session(s)
+2026-03-19 18:49:47 - app.services.mobile_scan_service - INFO - Mobile scan session created: 22cc9bab...
+2026-03-19 18:49:51 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 22cc9bab...
+2026-03-19 18:50:07 - app.services.mobile_scan_service - INFO - Mobile scan session created: 14faaa11...
+2026-03-19 18:50:10 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 14faaa11...
+2026-03-19 18:51:19 - app.services.mobile_scan_service - INFO - Mobile scan session created: 029e1fde...
+2026-03-19 18:54:29 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 029e1fde...
+2026-03-19 19:31:10 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 19:31:11 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 19:31:12 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 19:31:12 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 19:31:17 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 19:31:17 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 19:31:32 - app.services.mobile_scan_service - INFO - Mobile scan session created: ace737ef...
+2026-03-19 19:32:12 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_193212.jpg
+2026-03-19 19:32:12 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 19:32:25 - analysercomptacore.services.archive_service - INFO - Renamed archived image: UNKNOWN_20260319_193212.jpg -> STARBUCKS_-_CONCESSIONS_GARE_FRANCE_SAS_20260319_193212.jpg
+2026-03-19 19:32:44 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_193244.jpg
+2026-03-19 19:32:44 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 19:33:04 - analysercomptacore.services.archive_service - INFO - Renamed archived image: UNKNOWN_20260319_193244.jpg -> LEVADURA_MADRE_NATURAL_BAKERY_20260319_193244.jpg
+2026-03-19 19:33:14 - app.pages.outbound - INFO - Done scanning: 2 receipts, statuses: ['ready', 'ready']
+2026-03-19 19:33:14 - nicegui - ERROR - the response to the browser has already been built, so modifications cannot be sent back anymore
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\events.py", line 442, in handle_event
+    result = cast(Callable[[], Any], handler)()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\outbound.py", line 249, in on_done_scanning
+    ScanSessionStore.add_receipt(
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\scan_session_store.py", line 82, in add_receipt
+    app.storage.browser[STORAGE_KEY] = store
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\persistence\read_only_dict.py", line 15, in __setitem__
+    raise TypeError(self._write_error_message)
+TypeError: the response to the browser has already been built, so modifications cannot be sent back anymore
+2026-03-19 19:34:35 - app.services.mobile_scan_service - INFO - Mobile scan session created: 36fdeeb6...
+2026-03-19 19:34:37 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 36fdeeb6...
+2026-03-19 19:38:41 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 19:38:42 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 19:38:43 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 19:38:43 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 19:38:48 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 19:38:48 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 19:38:55 - app.services.mobile_scan_service - INFO - Mobile scan session created: b41afe16...
+2026-03-19 19:38:57 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: b41afe16...
+2026-03-19 19:39:00 - app.services.mobile_scan_service - INFO - Mobile scan session created: ce079ff6...
+2026-03-19 19:39:19 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_193919.jpg
+2026-03-19 19:39:19 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 19:39:38 - analysercomptacore.services.archive_service - INFO - Renamed archived image: UNKNOWN_20260319_193919.jpg -> STARBUCKS_-_CONCESSIONS_GARE_FRANCE_SAS_20260319_193919.jpg
+2026-03-19 19:39:44 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_193944.jpg
+2026-03-19 19:39:44 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 19:40:00 - analysercomptacore.services.archive_service - INFO - Renamed archived image: UNKNOWN_20260319_193944.jpg -> LEVADURA_MADRE_NATURAL_BAKERY_20260319_193944.jpg
+2026-03-19 19:40:02 - app.pages.outbound - INFO - Done scanning: 2 receipts, statuses: ['ready', 'ready']
+2026-03-19 19:40:02 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 49c810f03561 (status=ready), total=1
+2026-03-19 19:40:02 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt d3af480a180f (status=ready), total=2
+2026-03-19 19:40:02 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: ce079ff6...
+2026-03-19 19:41:17 - app.services.scan_session_store - INFO - ScanSessionStore: marked d3af480a180f as imported
+2026-03-19 19:41:17 - app.pages.factures - INFO - Imported scanned receipt d3af480a180f into create facture form
+2026-03-19 19:44:21 - app.services.scan_session_store - INFO - ScanSessionStore: removed receipt d3af480a180f
+2026-03-19 19:44:46 - app.services.scan_session_store - INFO - ScanSessionStore: marked 49c810f03561 as imported
+2026-03-19 19:44:46 - app.pages.factures - INFO - Imported scanned receipt 49c810f03561 into create facture form
+2026-03-19 19:47:26 - app.services.scan_session_store - INFO - ScanSessionStore: removed receipt 49c810f03561
+2026-03-19 19:53:17 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-19 19:53:18 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-19 19:53:18 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-19 19:53:18 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-19 19:53:23 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 19:53:23 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-19 19:55:43 - app.services.mobile_scan_service - INFO - Mobile scan session created: 3d08bfb6...
+2026-03-19 19:56:16 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_195616.jpg
+2026-03-19 19:56:16 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 19:56:37 - analysercomptacore.services.archive_service - INFO - Renamed archived image: UNKNOWN_20260319_195616.jpg -> ETEP_OPERATIONS_SNC_20260319_195616.jpg
+2026-03-19 19:56:46 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260319_195646.jpg
+2026-03-19 19:56:46 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-19 19:56:59 - analysercomptacore.services.archive_service - INFO - Renamed archived image: UNKNOWN_20260319_195646.jpg -> STARBUCKS_-_CONCESSIONS_GARE_FRANCE_SAS_20260319_195646.jpg
+2026-03-19 19:57:03 - app.pages.outbound - INFO - Done scanning: 2 receipts, statuses: ['ready', 'ready']
+2026-03-19 19:57:03 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt f8ac52b366c2 (status=ready), total=1
+2026-03-19 19:57:03 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 376ca6218708 (status=ready), total=2
+2026-03-19 19:57:03 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 3d08bfb6...
+2026-03-19 19:57:37 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=717, type=FILE, status=CONFIRMED, supplier=None, facture=None
+2026-03-19 19:57:37 - app.services.scan_session_store - INFO - ScanSessionStore: marked f8ac52b366c2 as matched (tx=717)
+2026-03-19 19:58:02 - app.pages.factures - INFO - Imported scanned receipt 376ca6218708 into create facture form
+2026-03-19 19:58:47 - app.pages.factures - INFO - Auto-created product 'STARBU-CAKECITRON' (CAKE CITRON) for supplier 13
+2026-03-19 19:58:47 - app.pages.factures - INFO - Auto-created product 'STARBU-CAFFELATTEVENTI' (CAFFE LATTE VENTI) for supplier 13
+2026-03-19 19:58:47 - app.pages.factures - INFO - Auto-created product 'STARBU-CHIPSANGSEL35GRL' (CHIPS ANG SEL 35G RL) for supplier 13
+2026-03-19 19:58:47 - app.services.scan_session_store - INFO - ScanSessionStore: marked 376ca6218708 as imported
+2026-03-19 20:00:24 - app.services.scan_session_store - INFO - ScanSessionStore: reset f8ac52b366c2 to ready
+2026-03-19 20:02:14 - app.pages.factures - INFO - Imported scanned receipt f8ac52b366c2 into create facture form
+2026-03-19 20:02:58 - app.pages.factures - INFO - Imported scanned receipt f8ac52b366c2 into create facture form
+2026-03-19 20:03:27 - app.pages.factures - INFO - Imported scanned receipt f8ac52b366c2 into create facture form
+2026-03-19 20:03:48 - app.pages.factures - INFO - Auto-created product 'STARBU-CAROTTESRAPEES3760' (CAROTTES RAPEES 3760373401770) for supplier 13
+2026-03-19 20:03:48 - app.pages.factures - INFO - Auto-created product 'STARBU-CAFELONG' (CAFE LONG) for supplier 13
+2026-03-19 20:03:48 - app.pages.factures - INFO - Auto-created product 'STARBU-CUPMANGUE110G5425' (CUP MANGUE 110G 5425013565677) for supplier 13
+2026-03-19 20:03:48 - app.pages.factures - INFO - Auto-created product 'STARBU-SUPERSMOOTHIEMANGUE' (SUPERSMOOTHIE MANGUE 5036862235150) for supplier 13
+2026-03-19 20:03:48 - app.services.scan_session_store - INFO - ScanSessionStore: marked f8ac52b366c2 as imported
+2026-03-25 10:02:28 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 10:02:31 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 10:02:32 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 10:02:32 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 10:02:37 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 10:02:37 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 10:02:44 - nicegui - ERROR - (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\installs\PY3.12\Lib\socket.py", line 852, in create_connection
+    raise exceptions[0]
+  File "C:\installs\PY3.12\Lib\socket.py", line 837, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3309, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 673, in __init__
+    self.__connect()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 899, in __connect
+    with util.safe_reraise():
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\sessions.py", line 85, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 33, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    return create_500_error_page(e, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    raise e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    result = func(*dec_args, **dec_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\outbound.py", line 56, in outbound_page
+    distinct_data = BankInstructionService.get_distinct_months_years()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\bank_instruction_service.py", line 101, in get_distinct_months_years
+    return CoreBankService.get_distinct_months_years(db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\bank_service.py", line 155, in get_distinct_months_years
+    ).all()
+      ^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2239, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2108, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1187, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3285, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3309, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 673, in __init__
+    self.__connect()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 899, in __connect
+    with util.safe_reraise():
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-25 10:04:05 - app.services.mobile_scan_service - INFO - Mobile scan session created: f4a0e159...
+2026-03-25 10:04:07 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: f4a0e159...
+2026-03-25 10:04:22 - app.services.mobile_scan_service - INFO - Mobile scan session created: 08063db6...
+2026-03-25 10:04:24 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 08063db6...
+2026-03-25 11:18:19 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 11:18:20 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 11:18:20 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 11:18:20 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 11:18:25 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 11:18:25 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 11:18:45 - app.services.mobile_scan_service - INFO - Mobile scan session created: 30222c3a...
+2026-03-25 11:18:47 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 30222c3a...
+2026-03-25 11:18:49 - app.services.mobile_scan_service - INFO - Mobile scan session created: 1a2567a7...
+2026-03-25 11:18:50 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 1a2567a7...
+2026-03-25 11:25:17 - app.services.mobile_scan_service - INFO - Mobile scan session created: 8505f469...
+2026-03-25 11:25:42 - analysercomptacore.services.archive_service - INFO - Archived invoice image: UNKNOWN_20260325_112542.jpg
+2026-03-25 11:25:52 - app.pages.outbound - INFO - Import done: 1 files imported
+2026-03-25 11:25:52 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 8505f469...
+2026-03-25 11:40:27 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 11:40:28 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 11:40:28 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 11:40:28 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 11:40:33 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 11:40:33 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 11:40:39 - app.services.mobile_scan_service - INFO - Mobile scan session created: 8a650759...
+2026-03-25 11:41:00 - app.api.mobile_scan - ERROR - Import archive failed for analysecomptaimages/2026_03/la_maree_20260325_103752.jpg: [Errno 2] No such file or directory: 'archives\\invoices\\analysecomptaimages\\2026_03\\la_maree_20260325_103752.jpg'
+2026-03-25 11:41:23 - app.api.mobile_scan - ERROR - Import archive failed for analysecomptaimages/2026_03/la_maree_20260325_103752.jpg: [Errno 2] No such file or directory: 'archives\\invoices\\analysecomptaimages\\2026_03\\la_maree_20260325_103752.jpg'
+2026-03-25 11:43:10 - app.pages.outbound - INFO - Import done: 0 files imported
+2026-03-25 11:43:10 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 8a650759...
+2026-03-25 11:43:19 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 11:43:19 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 11:43:20 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 11:43:20 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 11:43:25 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 11:43:25 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 11:43:32 - app.services.mobile_scan_service - INFO - Mobile scan session created: 9eeffcb0...
+2026-03-25 11:43:50 - app.api.mobile_scan - INFO - Imported file archived: la_maree_20260325_103752.jpg
+2026-03-25 11:43:59 - app.pages.outbound - INFO - Import done: 1 files imported
+2026-03-25 11:43:59 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 9eeffcb0...
+2026-03-25 11:52:01 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 11:52:01 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 11:52:02 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 11:52:02 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 11:52:07 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 11:52:07 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 11:52:35 - app.services.mobile_scan_service - INFO - Mobile scan session created: fa960be3...
+2026-03-25 11:52:47 - app.api.mobile_scan - INFO - Imported file archived: la_maree_20260325_103752.jpg
+2026-03-25 11:52:56 - app.pages.outbound - INFO - Import done: 1 files imported
+2026-03-25 11:52:56 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 624f9938fac7 (status=ready), total=3
+2026-03-25 11:52:56 - app.pages.outbound - INFO - Import: synced 1 files to ScanSessionStore
+2026-03-25 11:52:56 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: fa960be3...
+2026-03-25 11:53:19 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-25 11:53:52 - app.services.outbound_match_service - WARNING - OCR unsuccessful for la_maree_20260325_103752.jpg: Unexpected error: Could not connect to the endpoint URL: "https://bedrock-runtime.us-east-1.amazonaws.com/model/arn%3Aaws%3Abedrock%3Aus-east-1%3A857928859285%3Ainference-profile%2Fus.anthropic.claude-sonnet-4-6/invoke"
+2026-03-25 11:53:52 - app.pages.factures - INFO - Imported scanned receipt 624f9938fac7 into create facture form
+2026-03-25 11:54:36 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-25 11:55:09 - app.services.outbound_match_service - WARNING - OCR unsuccessful for la_maree_20260325_103752.jpg: Unexpected error: Could not connect to the endpoint URL: "https://bedrock-runtime.us-east-1.amazonaws.com/model/arn%3Aaws%3Abedrock%3Aus-east-1%3A857928859285%3Ainference-profile%2Fus.anthropic.claude-sonnet-4-6/invoke"
+2026-03-25 11:55:09 - app.pages.factures - INFO - Imported scanned receipt 624f9938fac7 into create facture form
+2026-03-25 12:00:07 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-25 12:00:29 - analysercomptacore.services.archive_service - INFO - Renamed archived image: la_maree_20260325_103752.jpg -> SARL_ACP_-_LA_MAREE_20260325_103752.jpg
+2026-03-25 12:00:29 - app.services.scan_session_store - INFO - ScanSessionStore: updated OCR for 624f9938fac7
+2026-03-25 12:00:29 - app.pages.factures - INFO - Imported scanned receipt 624f9938fac7 into create facture form
+2026-03-25 12:02:16 - app.pages.factures - INFO - Imported scanned receipt 624f9938fac7 into create facture form
+2026-03-25 12:02:21 - app.pages.factures - INFO - Auto-created product 'LA-20260325120221' (LOT 12 BAR OU DAURA) for supplier 14
+2026-03-25 12:02:21 - app.services.scan_session_store - INFO - ScanSessionStore: marked 624f9938fac7 as imported
+2026-03-25 12:03:07 - app.services.mobile_scan_service - INFO - Mobile scan session created: 6ba695c8...
+2026-03-25 14:40:16 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 14:40:17 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 14:40:17 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 14:40:17 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 14:40:22 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 14:40:22 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 14:44:07 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 14:44:08 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 14:44:09 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 14:44:09 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 14:44:14 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 14:44:14 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 14:45:43 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=42
+2026-03-25 14:53:41 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 14:53:41 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 14:53:42 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 14:53:42 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 14:53:47 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 14:53:47 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 14:54:19 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=723, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-25 14:57:53 - analysercomptacore.services.outbound_match_service - INFO - Deleted 1 outbound matches for tx=723
+2026-03-25 14:58:03 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 14:58:04 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 14:58:04 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 14:58:04 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 14:58:09 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 14:58:09 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 14:58:22 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=723, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-25 15:04:07 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 15:04:08 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 15:04:08 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 15:04:08 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 15:04:13 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 15:04:13 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 15:09:35 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 15:09:36 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 15:09:36 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 15:09:36 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 15:09:41 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 15:09:41 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 15:11:14 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=721, type=MANUAL, status=CONFIRMED, supplier=8, facture=59
+2026-03-25 17:58:13 - analysercomptacore.services.outbound_match_service - INFO - Deleted 2 outbound matches for tx=721
+2026-03-25 18:08:59 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 18:09:00 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 18:09:00 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 18:09:00 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 18:09:05 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 18:09:05 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 18:09:36 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=36
+2026-03-25 18:12:27 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 18:12:27 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 18:12:28 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 18:12:28 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 18:12:33 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 18:12:33 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 18:13:12 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=41
+2026-03-25 18:18:24 - analysercomptacore.services.outbound_match_service - INFO - Deleted 3 outbound matches for tx=724
+2026-03-25 18:18:32 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=42
+2026-03-25 18:18:44 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=36
+2026-03-25 18:20:37 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-25 18:20:38 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-25 18:20:38 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-25 18:20:38 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-25 18:20:43 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 18:20:43 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-25 18:21:05 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=41
+2026-03-26 09:20:12 - analysercomptacore.services.outbound_match_service - INFO - Deleted 3 outbound matches for tx=724
+2026-03-26 09:20:22 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=42
+2026-03-26 09:20:35 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-26 09:20:36 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-26 09:20:36 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-26 09:20:36 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-26 09:20:41 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 09:20:41 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 09:21:06 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=36
+2026-03-26 09:21:18 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=41
+2026-03-26 09:35:15 - analysercomptacore.services.outbound_match_service - INFO - Deleted 3 outbound matches for tx=724
+2026-03-26 09:35:26 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=42
+2026-03-26 09:42:36 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-26 09:42:36 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-26 09:42:37 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-26 09:42:37 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-26 09:42:42 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 09:42:42 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 09:43:57 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=36
+2026-03-26 09:44:15 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=724, type=MANUAL, status=CONFIRMED, supplier=12, facture=41
+2026-03-26 09:45:11 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=722, type=MANUAL, status=CONFIRMED, supplier=12, facture=41
+2026-03-26 10:07:39 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-26 10:07:40 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-26 10:07:41 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-26 10:07:41 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-26 10:07:46 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 10:07:46 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 10:07:57 - nicegui - ERROR - (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 661, in connect
+    sock = socket.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\installs\PY3.12\Lib\socket.py", line 852, in create_connection
+    raise exceptions[0]
+  File "C:\installs\PY3.12\Lib\socket.py", line 837, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3309, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 673, in __init__
+    self.__connect()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 899, in __connect
+    with util.safe_reraise():
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\sessions.py", line 85, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\storage.py", line 33, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 23, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\installs\PY3.12\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\middlewares.py", line 13, in dispatch
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 29, in __call__
+    await responder(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 130, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\gzip.py", line 46, in __call__
+    await self.app(scope, receive, self.send_with_compression)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 162, in decorated
+    return create_500_error_page(e, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 129, in create_500_error_page
+    raise e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\nicegui\page.py", line 160, in decorated
+    result = func(*dec_args, **dec_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\pages\outbound.py", line 56, in outbound_page
+    distinct_data = BankInstructionService.get_distinct_months_years()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\app\services\bank_instruction_service.py", line 101, in get_distinct_months_years
+    return CoreBankService.get_distinct_months_years(db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyserComptaCore\src\analysercomptacore\services\bank_service.py", line 155, in get_distinct_months_years
+    ).all()
+      ^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2239, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2108, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1187, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3285, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3309, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 673, in __init__
+    self.__connect()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 899, in __connect
+    with util.safe_reraise():
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 365, in __init__
+    self.connect()
+  File "D:\DevRoot\workspace\AnalyzerComptaWeb\.venv\Lib\site-packages\pymysql\connections.py", line 723, in connect
+    raise exc
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'localhost' ([WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-26 11:09:01 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-26 11:09:01 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-26 11:09:03 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-26 11:09:03 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-26 11:09:08 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 11:09:08 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 11:10:45 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-26 11:30:18 - app.services.mobile_scan_service - INFO - Mobile scan session created: f31cbfcd...
+2026-03-26 11:30:20 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: f31cbfcd...
+2026-03-26 11:35:26 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-26 11:35:27 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-26 11:35:28 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-26 11:35:28 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-26 11:35:33 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 11:35:33 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 11:36:04 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=720, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-26 11:36:04 - app.services.outbound_match_service - INFO - Auto-match complete: 4 processed, 0 facture, 1 implicit, 0 file, 3 skipped, 0 errors
+2026-03-26 11:39:59 - analysercomptacore.services.outbound_match_service - INFO - Deleted 1 outbound matches for tx=733
+2026-03-26 11:40:00 - analysercomptacore.services.outbound_match_service - INFO - Deleted 1 outbound matches for tx=749
+2026-03-26 11:40:00 - analysercomptacore.services.outbound_match_service - INFO - Deleted 1 outbound matches for tx=760
+2026-03-26 11:40:01 - analysercomptacore.services.outbound_match_service - INFO - Deleted 1 outbound matches for tx=772
+2026-03-26 11:40:07 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=726, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-26 11:40:07 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=731, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-26 11:40:07 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=760, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-26 11:40:07 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=778, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-26 11:40:07 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=816, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-26 11:40:07 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=855, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-26 11:40:07 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=861, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-26 11:40:07 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=866, type=IMPLICIT, status=CONFIRMED, supplier=None, facture=None
+2026-03-26 11:40:07 - app.services.outbound_match_service - INFO - Auto-match complete: 74 processed, 0 facture, 8 implicit, 0 file, 66 skipped, 0 errors
+2026-03-26 12:01:38 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-26 12:01:38 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-26 12:01:39 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-26 12:01:39 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-26 12:01:44 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 12:01:44 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 12:09:50 - app.services.outbound_match_service - INFO - Auto-match complete: 66 processed, 0 facture, 0 implicit, 0 file, 66 skipped, 0 errors
+2026-03-26 12:12:56 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-26 12:12:56 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-26 12:12:57 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-26 12:12:57 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-26 12:13:02 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 12:13:02 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-26 12:13:24 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=734, type=AUTO, status=CONFIRMED, supplier=8, facture=35
+2026-03-26 12:13:24 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=772, type=AUTO, status=CONFIRMED, supplier=8, facture=56
+2026-03-26 12:13:24 - app.services.outbound_match_service - INFO - Auto-match complete: 66 processed, 2 facture, 0 implicit, 0 file, 64 skipped, 0 errors
+2026-03-27 17:39:12 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-27 17:39:12 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-27 17:39:14 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-27 17:39:14 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-27 17:39:19 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-27 17:39:19 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-27 17:41:28 - app.services.mobile_scan_service - INFO - Mobile scan session created: 1d4af3ff...
+2026-03-27 17:41:30 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 1d4af3ff...
+2026-03-27 17:41:33 - app.services.mobile_scan_service - INFO - Mobile scan session created: f69dcc52...
+2026-03-27 17:41:34 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: f69dcc52...
+2026-03-29 15:45:10 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-29 15:45:13 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-29 15:45:15 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-29 15:45:15 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-29 15:45:20 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-29 15:45:20 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-29 15:46:48 - app.services.mobile_scan_service - INFO - Mobile scan session created: f69c3d4f...
+2026-03-29 16:05:37 - app.services.mobile_scan_service - INFO - Mobile scan session created: f52fa066...
+2026-03-29 16:05:50 - app.api.mobile_scan - INFO - Archived import image: la_maree_20260325_103752.jpg (original: 2026_03/la_maree_20260325_103752.jpg)
+2026-03-29 16:05:50 - app.api.mobile_scan - INFO - Archived import image: zooba_20260327_141814.jpg (original: 2026_03/zooba_20260327_141814.jpg)
+2026-03-29 16:05:50 - app.api.mobile_scan - INFO - Archived import image: indigo_park_20260327_163611.jpg (original: 2026_03/indigo_park_20260327_163611.jpg)
+2026-03-29 16:05:50 - app.api.mobile_scan - INFO - Archived import image: franxprix_20260328_181444.jpg (original: 2026_03/franxprix_20260328_181444.jpg)
+2026-03-29 16:05:50 - app.api.mobile_scan - INFO - Archived import image: la_maree_20260328_182023.jpg (original: 2026_03/la_maree_20260328_182023.jpg)
+2026-03-29 16:05:51 - app.api.mobile_scan - INFO - Archived import image: boucherie_royale_20260328_214911.jpg (original: 2026_03/boucherie_royale_20260328_214911.jpg)
+2026-03-29 16:05:51 - app.api.mobile_scan - INFO - Archived import image: boulangerie_henri_iv_20260328_215017.jpg (original: 2026_03/boulangerie_henri_iv_20260328_215017.jpg)
+2026-03-29 16:06:02 - app.pages.outbound - INFO - Import done: 7 files imported
+2026-03-29 16:06:02 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 1b2c9d7a6639 (status=ready), total=1
+2026-03-29 16:06:02 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 1c8446b07b6c (status=ready), total=2
+2026-03-29 16:06:02 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 690dfefdf011 (status=ready), total=3
+2026-03-29 16:06:02 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt da61b56bbe2d (status=ready), total=4
+2026-03-29 16:06:02 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt d73e45ae7571 (status=ready), total=5
+2026-03-29 16:06:02 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 61e90f474ea9 (status=ready), total=6
+2026-03-29 16:06:02 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 5a689ea5c1e9 (status=ready), total=7
+2026-03-29 16:06:02 - app.pages.outbound - INFO - Import: synced 7 files to ScanSessionStore
+2026-03-29 16:06:02 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: f52fa066...
+2026-03-29 16:07:01 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-29 16:07:11 - app.pages.factures - ERROR - On-demand OCR failed for la_maree_20260325_103752.jpg: [WinError 183] Impossible de créer un fichier déjà existant: 'archives\\invoices\\la_maree_20260325_103752.jpg' -> 'archives\\invoices\\SARL_ACP_-_LA_MAREE_20260325_103752.jpg'
+2026-03-29 16:07:11 - app.pages.factures - INFO - Imported scanned receipt 1b2c9d7a6639 into create facture form
+2026-03-29 16:07:25 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-29 16:07:35 - app.pages.factures - ERROR - On-demand OCR failed for la_maree_20260325_103752.jpg: [WinError 183] Impossible de créer un fichier déjà existant: 'archives\\invoices\\la_maree_20260325_103752.jpg' -> 'archives\\invoices\\SARL_ACP_-_LA_MAREE_20260325_103752.jpg'
+2026-03-29 16:07:35 - app.pages.factures - INFO - Imported scanned receipt 1b2c9d7a6639 into create facture form
+2026-03-29 16:07:57 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-29 16:08:06 - app.pages.factures - ERROR - On-demand OCR failed for la_maree_20260325_103752.jpg: [WinError 183] Impossible de créer un fichier déjà existant: 'archives\\invoices\\la_maree_20260325_103752.jpg' -> 'archives\\invoices\\SARL_ACP_-_LA_MAREE_20260325_103752.jpg'
+2026-03-29 16:08:06 - app.pages.factures - INFO - Imported scanned receipt 1b2c9d7a6639 into create facture form
+2026-03-29 16:08:35 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-29 16:08:46 - analysercomptacore.services.archive_service - INFO - Renamed archived image: la_maree_20260328_182023.jpg -> SARL_ACP_-_LA_MAREE_20260328_182023.jpg
+2026-03-29 16:08:46 - app.services.scan_session_store - INFO - ScanSessionStore: updated OCR for d73e45ae7571
+2026-03-29 16:08:46 - app.pages.factures - INFO - Imported scanned receipt d73e45ae7571 into create facture form
+2026-03-29 16:11:42 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-29 16:11:58 - app.pages.factures - ERROR - On-demand OCR failed for la_maree_20260325_103752.jpg: [WinError 183] Impossible de créer un fichier déjà existant: 'archives\\invoices\\la_maree_20260325_103752.jpg' -> 'archives\\invoices\\SARL_ACP_-_LA_MAREE_20260325_103752.jpg'
+2026-03-29 16:11:58 - app.pages.factures - INFO - Imported scanned receipt 1b2c9d7a6639 into create facture form
+2026-03-29 16:13:24 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-29 16:13:34 - app.pages.factures - ERROR - On-demand OCR failed for la_maree_20260325_103752.jpg: [WinError 183] Impossible de créer un fichier déjà existant: 'archives\\invoices\\la_maree_20260325_103752.jpg' -> 'archives\\invoices\\SARL_ACP_-_LA_MAREE_20260325_103752.jpg'
+2026-03-29 16:13:34 - app.pages.factures - INFO - Imported scanned receipt 1b2c9d7a6639 into create facture form
+2026-03-29 16:15:59 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-29 16:16:13 - analysercomptacore.services.archive_service - INFO - Renamed archived image: la_maree_20260325_103752.jpg -> SARL_ACP_-_LA_MAREE_20260325_103752.jpg
+2026-03-29 16:16:13 - app.services.scan_session_store - INFO - ScanSessionStore: updated OCR for 1b2c9d7a6639
+2026-03-29 16:16:13 - app.pages.factures - INFO - Imported scanned receipt 1b2c9d7a6639 into create facture form
+2026-03-29 16:16:18 - app.pages.factures - INFO - Reusing existing product 'LA-20260325120221' for 'LOT 12 BAR OU DAURA' (supplier 14)
+2026-03-29 16:16:18 - app.services.scan_session_store - INFO - ScanSessionStore: marked 1b2c9d7a6639 as imported
+2026-03-29 16:16:26 - app.pages.factures - INFO - Imported scanned receipt d73e45ae7571 into create facture form
+2026-03-29 16:16:30 - app.pages.factures - INFO - Auto-created product 'LA-20260329161630' (LOT 15) for supplier 14
+2026-03-29 16:16:30 - app.services.scan_session_store - INFO - ScanSessionStore: marked d73e45ae7571 as imported
+2026-03-29 16:19:09 - analysercomptacore.services.outbound_match_service - INFO - Created outbound match: tx=715, type=MANUAL, status=CONFIRMED, supplier=14, facture=71
+2026-03-29 16:25:40 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-29 16:25:42 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-29 16:25:44 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-29 16:25:44 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-29 16:25:49 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-29 16:25:49 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-29 16:29:26 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-29 16:29:26 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-29 16:29:27 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-29 16:29:27 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-29 16:29:32 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-29 16:29:32 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-29 16:29:50 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-29 16:30:00 - analysercomptacore.services.archive_service - INFO - Renamed archived image: SARL_ACP_-_LA_MAREE_20260325_103752.jpg -> SARL_ACP_-_LA_MAREE_20260325_103752.jpg
+2026-03-29 16:30:17 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-03-29 16:30:28 - analysercomptacore.services.archive_service - INFO - Renamed archived image: boucherie_royale_20260328_214911.jpg -> BOUCHERIE_ROYALE_20260328_214911.jpg
+2026-03-30 17:33:52 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-03-30 17:33:54 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-03-30 17:33:56 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-03-30 17:33:56 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-03-30 17:34:01 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-30 17:34:01 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-03-30 17:35:26 - app.services.scan_session_store - INFO - ScanSessionStore: cleared all receipts
+2026-03-30 17:35:43 - app.services.mobile_scan_service - INFO - Mobile scan session created: 048c926c...
+2026-03-30 17:36:30 - app.api.mobile_scan - INFO - Archived import file: bo_cherie_royale_20260330_173025.json (original: 2026_03/bo_cherie_royale_20260330_173025.json)
+2026-03-30 17:36:30 - app.api.mobile_scan - INFO - Archived import file: la_maree_20260330_173057.json (original: 2026_03/la_maree_20260330_173057.json)
+2026-03-30 17:36:30 - app.api.mobile_scan - INFO - Archived import file: franprix_20260330_173131.json (original: 2026_03/franprix_20260330_173131.json)
+2026-03-30 17:36:30 - app.api.mobile_scan - INFO - Archived import file: boulangerie_henri_iv_20260330_173154.json (original: 2026_03/boulangerie_henri_iv_20260330_173154.json)
+2026-03-30 17:36:31 - app.api.mobile_scan - INFO - Archived import file: indigo_park_20260330_173213.json (original: 2026_03/indigo_park_20260330_173213.json)
+2026-03-30 17:36:31 - app.api.mobile_scan - INFO - Archived import file: zooba_20260330_173241.json (original: 2026_03/zooba_20260330_173241.json)
+2026-03-30 17:36:31 - app.api.mobile_scan - INFO - Archived import file: la_maree_20260330_173306.json (original: 2026_03/la_maree_20260330_173306.json)
+2026-03-30 17:36:31 - app.api.mobile_scan - INFO - Archived import file: bo_cherie_royale_20260330_173025.jpg (original: 2026_03/bo_cherie_royale_20260330_173025.jpg)
+2026-03-30 17:36:31 - app.api.mobile_scan - INFO - Populated receipt from JSON sidecar: bo_cherie_royale_20260330_173025.json
+2026-03-30 17:36:31 - app.api.mobile_scan - INFO - Archived import file: la_maree_20260330_173057.jpg (original: 2026_03/la_maree_20260330_173057.jpg)
+2026-03-30 17:36:31 - app.api.mobile_scan - INFO - Populated receipt from JSON sidecar: la_maree_20260330_173057.json
+2026-03-30 17:36:32 - app.api.mobile_scan - INFO - Archived import file: franprix_20260330_173131.jpg (original: 2026_03/franprix_20260330_173131.jpg)
+2026-03-30 17:36:32 - app.api.mobile_scan - INFO - Populated receipt from JSON sidecar: franprix_20260330_173131.json
+2026-03-30 17:36:32 - app.api.mobile_scan - INFO - Archived import file: boulangerie_henri_iv_20260330_173154.jpg (original: 2026_03/boulangerie_henri_iv_20260330_173154.jpg)
+2026-03-30 17:36:32 - app.api.mobile_scan - INFO - Populated receipt from JSON sidecar: boulangerie_henri_iv_20260330_173154.json
+2026-03-30 17:36:32 - app.api.mobile_scan - INFO - Archived import file: indigo_park_20260330_173213.jpg (original: 2026_03/indigo_park_20260330_173213.jpg)
+2026-03-30 17:36:32 - app.api.mobile_scan - INFO - Populated receipt from JSON sidecar: indigo_park_20260330_173213.json
+2026-03-30 17:36:33 - app.api.mobile_scan - INFO - Archived import file: zooba_20260330_173241.jpg (original: 2026_03/zooba_20260330_173241.jpg)
+2026-03-30 17:36:33 - app.api.mobile_scan - INFO - Populated receipt from JSON sidecar: zooba_20260330_173241.json
+2026-03-30 17:36:33 - app.api.mobile_scan - INFO - Archived import file: la_maree_20260330_173306.jpg (original: 2026_03/la_maree_20260330_173306.jpg)
+2026-03-30 17:36:33 - app.api.mobile_scan - INFO - Populated receipt from JSON sidecar: la_maree_20260330_173306.json
+2026-03-30 17:36:50 - app.pages.outbound - INFO - Import done: 7 files imported
+2026-03-30 17:36:50 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 76474f96d396 (status=ready), total=1
+2026-03-30 17:36:50 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt ba16e233d1c1 (status=ready), total=2
+2026-03-30 17:36:50 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt c6a7bfb93167 (status=ready), total=3
+2026-03-30 17:36:50 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 4c23d6e766c2 (status=ready), total=4
+2026-03-30 17:36:50 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt c6997296ea5d (status=ready), total=5
+2026-03-30 17:36:50 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 15b4ea439a80 (status=ready), total=6
+2026-03-30 17:36:50 - app.services.scan_session_store - INFO - ScanSessionStore: added receipt 1aed3d7c994d (status=ready), total=7
+2026-03-30 17:36:50 - app.pages.outbound - INFO - Import: synced 7 files to ScanSessionStore
+2026-03-30 17:36:50 - app.services.mobile_scan_service - INFO - Mobile scan session invalidated: 048c926c...
+2026-04-03 15:17:30 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-04-03 15:17:38 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-04-03 15:17:44 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-04-03 15:17:44 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-04-03 15:17:49 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-04-03 15:17:49 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-04-03 15:18:41 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-04-03 15:18:42 - __main__ - INFO - Core ConfigLoader initialized (env=development)
+2026-04-03 15:18:43 - app.api.mobile_scan - INFO - Mobile scan API routes registered
+2026-04-03 15:18:43 - __main__ - INFO - Starting AnalyzerComptaWeb on port 9090
+2026-04-03 15:18:48 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-04-03 15:18:48 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-04-03 15:19:05 - app.services.superset_service - ERROR - Failed to get Superset access token: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-04-03 15:19:05 - app.pages.dashboard - ERROR - Failed to get Superset embed config: HTTPConnectionPool(host='localhost', port=8088): Max retries exceeded with url: /api/v1/security/login (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8088): Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée"))
+2026-11-16 20:11:00 - root - INFO - Logging initialized - file: D:\DevRoot\workspace\AnalyzerComptaWeb\analyzercompta.log
+2026-11-16 20:11:07 - main - INFO - Core ConfigLoader initialized (env=development)
+2026-11-16 20:11:13 - app.api.mobile_scan - INFO - Mobile scan API routes registered

@@ -1,7 +1,7 @@
 """LLM Service - abstraction over LLM providers for text generation."""
 import json
 import logging
-import requests
+import ollama
 from app.config import config
 
 logger = logging.getLogger(__name__)
@@ -23,33 +23,25 @@ class LLMService:
         """
         llm_config = LLMService._get_llm_config()
         ollama_config = llm_config.get('ollama', {})
-        base_url = ollama_config.get('base_url', 'http://localhost:11434')
+        host = ollama_config.get('base_url', 'http://localhost:11434')
         model = ollama_config.get('model', 'qwen2.5')
 
-        url = f"{base_url.rstrip('/')}/api/chat"
-        payload = {
-            'model': model,
-            'messages': [
-                {'role': 'system', 'content': system},
-                {'role': 'user', 'content': prompt},
-            ],
-            'stream': False,
-        }
-
         try:
-            response = requests.post(url, json=payload, timeout=120)
-            response.raise_for_status()
-            data = response.json()
-            return data.get('message', {}).get('content', '')
-        except requests.ConnectionError:
-            logger.error(f"Cannot connect to Ollama at {base_url}")
-            raise RuntimeError(f"Cannot connect to Ollama at {base_url}. Is the server running?")
-        except requests.Timeout:
-            logger.error("Ollama request timed out")
-            raise RuntimeError("Ollama request timed out after 120 seconds")
+            client = ollama.Client(host=host)
+            response = client.chat(
+                model=model,
+                messages=[
+                    {'role': 'system', 'content': system},
+                    {'role': 'user', 'content': prompt},
+                ],
+            )
+            return response['message']['content']
+        except ollama.ResponseError as e:
+            logger.error(f"Ollama response error: {e}")
+            raise RuntimeError(f"Ollama error: {e}")
         except Exception as e:
             logger.error(f"Ollama error: {e}")
-            raise RuntimeError(f"Ollama error: {e}")
+            raise RuntimeError(f"Ollama error: {e}. Is the server running?")
 
     @staticmethod
     def generate_with_bedrock(prompt: str, system: str) -> str:

@@ -9,6 +9,29 @@ class FactureService:
     """Service for SupplierFacture operations - wraps Core's SupplierService."""
 
     @staticmethod
+    def create(supplier_id: int, facture_num: str, facture_date: datetime,
+               ttc: float, ht: float, tva: float,
+               filename: str = 'WEB_MANUAL') -> int:
+        """Create a new supplier facture.
+
+        Args:
+            supplier_id: Supplier ID.
+            facture_num: Invoice number.
+            facture_date: Invoice date.
+            ttc: Amount TTC.
+            ht: Amount HT.
+            tva: Amount TVA.
+            filename: Source filename.
+
+        Returns:
+            New facture ID.
+        """
+        with get_db() as db:
+            return CoreSupplierService.persist_invoice(
+                db, supplier_id, facture_num, facture_date, ttc, ht, tva, filename
+            )
+
+    @staticmethod
     def get_all(supplier_id: Optional[int] = None,
                 date_from: Optional[datetime] = None,
                 date_to: Optional[datetime] = None,

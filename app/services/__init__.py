@@ -6,6 +6,9 @@ from app.services.bank_instruction_service import BankInstructionService
 from app.services.sales_service import SalesService
 from app.services.superset_service import SupersetService
 from app.services.reconciliation_service import ReconciliationService
+from app.services.outbound_match_service import OutboundMatchService
+from app.services.mobile_scan_service import MobileScanService
+from app.services.scan_session_store import ScanSessionStore
 
 __all__ = [
     'SupplierService',
@@ -16,4 +19,7 @@ __all__ = [
     'SalesService',
     'SupersetService',
     'ReconciliationService',
+    'OutboundMatchService',
+    'MobileScanService',
+    'ScanSessionStore',
 ]
